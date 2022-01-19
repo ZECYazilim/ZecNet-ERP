@@ -1,0 +1,6 @@
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\AbcYazilim.Dal.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\AbcYazilim.Dal.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.AssemblyReference.cache
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.CoreCompileInputs.cache
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.pdb

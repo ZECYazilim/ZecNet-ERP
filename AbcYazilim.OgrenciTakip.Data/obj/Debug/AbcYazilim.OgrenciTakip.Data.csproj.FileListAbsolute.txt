@@ -1,0 +1,6 @@
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\bin\Debug\AbcYazilim.OgrenciTakip.Data.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\bin\Debug\AbcYazilim.OgrenciTakip.Data.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\obj\Debug\AbcYazilim.OgrenciTakip.Data.csproj.AssemblyReference.cache
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\obj\Debug\AbcYazilim.OgrenciTakip.Data.csproj.CoreCompileInputs.cache
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\obj\Debug\AbcYazilim.OgrenciTakip.Data.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\obj\Debug\AbcYazilim.OgrenciTakip.Data.pdb
