@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +50,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseBll.cs" />
+    <Compile Include="Functions\Converts.cs" />
+    <Compile Include="Functions\GeneralFunctions.cs" />
+    <Compile Include="General\OkulBll.cs" />
+    <Compile Include="Interfaces\IBaseBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbcYazilim.Dal\AbcYazilim.Dal.csproj">
+      <Project>{B27BED80-01FC-41F9-8717-5BB0F0CEB39A}</Project>
+      <Name>AbcYazilim.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AbcYazilim.OgrenciTakip.Common.csproj">
+      <Project>{C59C7FD5-90D0-4702-96D6-273C9D8A34E4}</Project>
+      <Name>AbcYazilim.OgrenciTakip.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Data\AbcYazilim.OgrenciTakip.Data.csproj">
+      <Project>{A98A5342-33B2-44C8-A9BA-DE7B3659501F}</Project>
+      <Name>AbcYazilim.OgrenciTakip.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Model\AbcYazilim.OgrenciTakip.Model.csproj">
+      <Project>{09AB244B-712C-4508-9762-FBDA0216E056}</Project>
+      <Name>AbcYazilim.OgrenciTakip.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
