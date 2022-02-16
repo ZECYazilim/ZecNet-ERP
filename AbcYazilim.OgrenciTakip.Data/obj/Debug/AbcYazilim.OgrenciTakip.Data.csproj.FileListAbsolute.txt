@@ -11,3 +11,4 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\bin\Debug\EntityFramework.xml
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\obj\Debug\AbcYazilim.OgrenciTakip.Data.csproj.CopyComplete
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Data\bin\Debug\AbcYazilim.OgrenciTakip.Model.dll.config

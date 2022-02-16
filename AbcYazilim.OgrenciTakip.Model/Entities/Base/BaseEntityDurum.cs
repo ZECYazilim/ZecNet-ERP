@@ -2,6 +2,6 @@
 {
     public class BaseEntityDurum:BaseEntity
     {
-        public bool Durum { get; set; } = true;
+        public bool Durum { get; set; }// = true;
     }
 }

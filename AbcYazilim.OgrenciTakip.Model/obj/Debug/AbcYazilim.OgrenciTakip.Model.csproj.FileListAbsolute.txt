@@ -4,3 +4,9 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\obj\Debug\AbcYazilim.OgrenciTakip.Model.csproj.CoreCompileInputs.cache
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\obj\Debug\AbcYazilim.OgrenciTakip.Model.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\obj\Debug\AbcYazilim.OgrenciTakip.Model.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\bin\Debug\AbcYazilim.OgrenciTakip.Model.dll.config
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\bin\Debug\EntityFramework.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\bin\Debug\EntityFramework.xml
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Model\obj\Debug\AbcYazilim.OgrenciTakip.Model.csproj.CopyComplete

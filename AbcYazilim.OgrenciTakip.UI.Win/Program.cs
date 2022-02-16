@@ -1,4 +1,4 @@
-﻿using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
+﻿using AbcYazilim.OgrenciTakip.UI.Win.GeneralForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaseKartlarForm());
+            Application.Run(new AnaForm());
         }
     }
 }

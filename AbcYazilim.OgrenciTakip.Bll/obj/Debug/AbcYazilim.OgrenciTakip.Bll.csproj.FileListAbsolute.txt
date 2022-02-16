@@ -57,3 +57,4 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\b
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.csproj.CopyComplete
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Data.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Data.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Model.dll.config

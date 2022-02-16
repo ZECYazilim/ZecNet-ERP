@@ -58,6 +58,11 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
             _uow.Rep.Delete(entity.EntityConvert<T>());
             return _uow.Save();
         }
+        protected string BaseCreateNewCode(KartTuru kartTuru,Expression<Func<T,string>>filter,Expression<Func<T,bool>> where = null)
+        {
+            GeneralFunctions.CreateUnitOfWork<T, TContext>(ref _uow);
+            return _uow.Rep.CreateNewCode(kartTuru,filter,where);
+        }
         #region Dispose
     
         public void Dispose()
