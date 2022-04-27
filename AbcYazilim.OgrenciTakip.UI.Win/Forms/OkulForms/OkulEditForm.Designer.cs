@@ -213,7 +213,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
             this.txtIlce.Size = new System.Drawing.Size(145, 20);
             this.txtIlce.StatusBarAciklama = "İlçe Seçiniz.";
             this.txtIlce.StatusBarKisaYol = "F4 :";
-            this.txtIlce.StatusBarKisaYolAciklama = null;
+            this.txtIlce.StatusBarKisaYolAciklama = "İlçe Seç";
             this.txtIlce.StyleController = this.myDataLayoutControl;
             this.txtIlce.TabIndex = 2;
             // 
@@ -232,7 +232,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
             this.txtIl.Size = new System.Drawing.Size(145, 20);
             this.txtIl.StatusBarAciklama = "İl Seçiniz.";
             this.txtIl.StatusBarKisaYol = "F4 :";
-            this.txtIl.StatusBarKisaYolAciklama = null;
+            this.txtIl.StatusBarKisaYolAciklama = "İl Seç";
             this.txtIl.StyleController = this.myDataLayoutControl;
             this.txtIl.TabIndex = 1;
             // 

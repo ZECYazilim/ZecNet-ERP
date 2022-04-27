@@ -1,11 +1,8 @@
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Bll.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Bll.pdb
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.csproj.AssemblyReference.cache
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.csproj.CoreCompileInputs.cache
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.dll
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.pdb
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.Dal.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Common.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Data.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Model.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\EntityFramework.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\EntityFramework.SqlServer.dll
@@ -19,7 +16,9 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\b
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.Dal.pdb
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Common.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Data.pdb
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Model.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Model.dll.config
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\EntityFramework.xml
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\DevExpress.XtraEditors.v20.1.xml
@@ -54,7 +53,8 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\b
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.csproj.AssemblyReference.cache
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.csproj.CoreCompileInputs.cache
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.csproj.CopyComplete
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Data.dll
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Data.pdb
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Model.dll.config
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Bll\obj\Debug\AbcYazilim.OgrenciTakip.Bll.pdb

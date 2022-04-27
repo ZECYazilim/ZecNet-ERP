@@ -17,6 +17,7 @@ namespace AbcYazilim.Dal.Interfaces
         void Delete(IEnumerable<T> entities);
         TResult Find<TResult>(Expression<Func<T, bool>> filter,Expression<Func<T,TResult>> selector); //anlamadım..
         IQueryable<TResult> Select<TResult>(Expression<Func<T, bool>> filter,Expression<Func<T,TResult>> selector); //anlamadım.
+        int Count(Expression<Func<T, bool>> filter=null);
         string CreateNewCode(KartTuru kartTuru, Expression<Func<T, string>> filter, Expression<Func<T, bool>> where = null);
 
     }

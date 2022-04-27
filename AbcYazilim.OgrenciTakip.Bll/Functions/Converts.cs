@@ -1,5 +1,6 @@
 ﻿using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AbcYazilim.OgrenciTakip.Bll.Functions
@@ -20,6 +21,10 @@ namespace AbcYazilim.OgrenciTakip.Bll.Functions
                     hp.SetValue(hedef, ReferenceEquals(value, "") ? null : value);
             }
             return hedef;
+        }
+        public static IEnumerable<TTarget> EntityListConvert<TTarget>(this IEnumerable<IBaseEntity> source)
+        {
+            return source?.Select(x=>x.EntityConvert<TTarget>()).ToList();
         }
     }
 }

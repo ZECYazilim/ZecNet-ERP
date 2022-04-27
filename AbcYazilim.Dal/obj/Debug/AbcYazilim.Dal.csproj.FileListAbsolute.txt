@@ -1,15 +1,8 @@
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\AbcYazilim.Dal.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\AbcYazilim.Dal.pdb
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.CoreCompileInputs.cache
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.dll
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\AbcYazilim.OgrenciTakip.Common.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\EntityFramework.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\EntityFramework.xml
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.AssemblyReference.cache
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.CopyComplete
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\AbcYazilim.OgrenciTakip.Common.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.XtraEditors.v20.1.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.Utils.v20.1.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.Data.v20.1.dll
@@ -19,6 +12,8 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevE
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\AbcYazilim.OgrenciTakip.Common.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\EntityFramework.xml
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.XtraEditors.v20.1.xml
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.Utils.v20.1.xml
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\DevExpress.Data.v20.1.xml
@@ -51,3 +46,8 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\de\D
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.AssemblyReference.cache
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.CoreCompileInputs.cache
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.csproj.CopyComplete
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.dll
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.Dal\obj\Debug\AbcYazilim.Dal.pdb

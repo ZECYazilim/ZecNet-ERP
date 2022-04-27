@@ -29,51 +29,56 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem24 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem25 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem26 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem27 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem28 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem29 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem30 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem31 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem32 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem33 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip18 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem34 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem35 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip19 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem36 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem37 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem38 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem39 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem40 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem41 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem42 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem43 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip23 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem44 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem45 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip24 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem46 = new DevExpress.Utils.ToolTipItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnSil = new DevExpress.XtraBars.BarButtonItem();
@@ -114,11 +119,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.barCikis = new DevExpress.XtraBars.BarStaticItem();
             this.barCikisAciklama = new DevExpress.XtraBars.BarStaticItem();
             this.btnAktifPasifKartlar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBagliKartlar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.sagMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sagMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -167,9 +175,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnFormatsizExcelDosyasi,
             this.btnWordDosyasi,
             this.btnPdfDosyasi,
-            this.btnTxtDosyasi});
+            this.btnTxtDosyasi,
+            this.btnBagliKartlar});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 40;
+            this.ribbonControl.MaxItemId = 41;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -194,17 +203,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnYeni.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
             this.btnYeni.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnYeni.Name = "btnYeni";
-            toolTipTitleItem1.ImageOptions.ImageIndex = 1;
-            toolTipTitleItem1.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem1.Text = "(Insert)\r\n";
-            toolTipItem1.Text = "Yeni Kart Ekle";
-            toolTipItem2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipItem2.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16;Svg";
-            toolTipItem2.Text = "<b>Formu Yeni Kart Ekleme Modunda Açar.</b>";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            superToolTip1.Items.Add(toolTipItem2);
-            this.btnYeni.SuperTip = superToolTip1;
+            toolTipTitleItem13.ImageOptions.ImageIndex = 1;
+            toolTipTitleItem13.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem13.Text = "(Insert)\r\n";
+            toolTipItem24.Text = "Yeni Kart Ekle";
+            toolTipItem25.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem25.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16;Svg";
+            toolTipItem25.Text = "<b>Formu Yeni Kart Ekleme Modunda Açar.</b>";
+            superToolTip13.Items.Add(toolTipTitleItem13);
+            superToolTip13.Items.Add(toolTipItem24);
+            superToolTip13.Items.Add(toolTipItem25);
+            this.btnYeni.SuperTip = superToolTip13;
             // 
             // btnSil
             // 
@@ -214,15 +223,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnSil.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.deletelist_32x32;
             this.btnSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnSil.Name = "btnSil";
-            toolTipTitleItem2.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem2.Text = "( Delete )\r\n";
-            toolTipItem3.Text = "Seçilen Kartı Sil\r\n";
-            toolTipItem4.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem4.Text = "Seçilen Kart Onayınız Alınarak Silinir.";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem3);
-            superToolTip2.Items.Add(toolTipItem4);
-            this.btnSil.SuperTip = superToolTip2;
+            toolTipTitleItem14.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem14.Text = "( Delete )\r\n";
+            toolTipItem26.Text = "Seçilen Kartı Sil\r\n";
+            toolTipItem27.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem27.Text = "Seçilen Kart Onayınız Alınarak Silinir.";
+            superToolTip14.Items.Add(toolTipTitleItem14);
+            superToolTip14.Items.Add(toolTipItem26);
+            superToolTip14.Items.Add(toolTipItem27);
+            this.btnSil.SuperTip = superToolTip14;
             // 
             // btnSec
             // 
@@ -232,15 +241,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnSec.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.apply_32x32;
             this.btnSec.Name = "btnSec";
             this.btnSec.ShortcutKeyDisplayString = "Enter";
-            toolTipTitleItem3.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem3.Text = "( Enter )\r\n";
-            toolTipItem5.Text = "Kartı Seç";
-            toolTipItem6.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem6.Text = "Seçilen Kart Önceki Karta Aktarılır.";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem5);
-            superToolTip3.Items.Add(toolTipItem6);
-            this.btnSec.SuperTip = superToolTip3;
+            toolTipTitleItem15.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem15.Text = "( Enter )\r\n";
+            toolTipItem28.Text = "Kartı Seç";
+            toolTipItem29.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem29.Text = "Seçilen Kart Önceki Karta Aktarılır.";
+            superToolTip15.Items.Add(toolTipTitleItem15);
+            superToolTip15.Items.Add(toolTipItem28);
+            superToolTip15.Items.Add(toolTipItem29);
+            this.btnSec.SuperTip = superToolTip15;
             // 
             // btnDuzelt
             // 
@@ -250,15 +259,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnDuzelt.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.edit_32x32;
             this.btnDuzelt.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
             this.btnDuzelt.Name = "btnDuzelt";
-            toolTipTitleItem4.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem4.Text = "( F3 )";
-            toolTipItem7.Text = "Seçilen Kartı Düzelt\r\n";
-            toolTipItem8.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem8.Text = "Seçilen Kartı Düzenleme Modunda Açar.";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem7);
-            superToolTip4.Items.Add(toolTipItem8);
-            this.btnDuzelt.SuperTip = superToolTip4;
+            toolTipTitleItem16.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem16.Text = "( F3 )";
+            toolTipItem30.Text = "Seçilen Kartı Düzelt\r\n";
+            toolTipItem31.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem31.Text = "Seçilen Kartı Düzenleme Modunda Açar.";
+            superToolTip16.Items.Add(toolTipTitleItem16);
+            superToolTip16.Items.Add(toolTipItem30);
+            superToolTip16.Items.Add(toolTipItem31);
+            this.btnDuzelt.SuperTip = superToolTip16;
             // 
             // btnYenile
             // 
@@ -268,15 +277,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnYenile.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.convert_32x32;
             this.btnYenile.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnYenile.Name = "btnYenile";
-            toolTipTitleItem5.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem5.Text = "( F5 )";
-            toolTipItem9.Text = "Tablo Verilerini Yenile";
-            toolTipItem10.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem10.Text = "Tablo Verilerini Yeniden Sorgulanalar Listeler.";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem9);
-            superToolTip5.Items.Add(toolTipItem10);
-            this.btnYenile.SuperTip = superToolTip5;
+            toolTipTitleItem17.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem17.Text = "( F5 )";
+            toolTipItem32.Text = "Tablo Verilerini Yenile";
+            toolTipItem33.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem33.Text = "Tablo Verilerini Yeniden Sorgulanalar Listeler.";
+            superToolTip17.Items.Add(toolTipTitleItem17);
+            superToolTip17.Items.Add(toolTipItem32);
+            superToolTip17.Items.Add(toolTipItem33);
+            this.btnYenile.SuperTip = superToolTip17;
             // 
             // btnFiltrele
             // 
@@ -286,15 +295,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnFiltrele.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.crossdatasourcefiltering_32x32;
             this.btnFiltrele.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
             this.btnFiltrele.Name = "btnFiltrele";
-            toolTipTitleItem6.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem6.Text = "( F8 )";
-            toolTipItem11.Text = "Tablo Verilerine Filtre Uygula";
-            toolTipItem12.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem12.Text = "Tablo Verilerine Filtre Uygulanmak Üzere Filtre Seçilir.";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            superToolTip6.Items.Add(toolTipItem11);
-            superToolTip6.Items.Add(toolTipItem12);
-            this.btnFiltrele.SuperTip = superToolTip6;
+            toolTipTitleItem18.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem18.Text = "( F8 )";
+            toolTipItem34.Text = "Tablo Verilerine Filtre Uygula";
+            toolTipItem35.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem35.Text = "Tablo Verilerine Filtre Uygulanmak Üzere Filtre Seçilir.";
+            superToolTip18.Items.Add(toolTipTitleItem18);
+            superToolTip18.Items.Add(toolTipItem34);
+            superToolTip18.Items.Add(toolTipItem35);
+            this.btnFiltrele.SuperTip = superToolTip18;
             // 
             // btnKolonlar
             // 
@@ -304,15 +313,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnKolonlar.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.weekend_32x32;
             this.btnKolonlar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
             this.btnKolonlar.Name = "btnKolonlar";
-            toolTipTitleItem7.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem7.Text = "( CTRL + O )";
-            toolTipItem13.Text = "Sütun Seç";
-            toolTipItem14.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem14.Text = "Tabloya Eklemek İçin Sütun Seçimi Yapılır.";
-            superToolTip7.Items.Add(toolTipTitleItem7);
-            superToolTip7.Items.Add(toolTipItem13);
-            superToolTip7.Items.Add(toolTipItem14);
-            this.btnKolonlar.SuperTip = superToolTip7;
+            toolTipTitleItem19.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem19.Text = "( CTRL + O )";
+            toolTipItem36.Text = "Sütun Seç";
+            toolTipItem37.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem37.Text = "Tabloya Eklemek İçin Sütun Seçimi Yapılır.";
+            superToolTip19.Items.Add(toolTipTitleItem19);
+            superToolTip19.Items.Add(toolTipItem36);
+            superToolTip19.Items.Add(toolTipItem37);
+            this.btnKolonlar.SuperTip = superToolTip19;
             // 
             // btnYazdir
             // 
@@ -322,15 +331,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnYazdir.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.print_32x32;
             this.btnYazdir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.btnYazdir.Name = "btnYazdir";
-            toolTipTitleItem8.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem8.Text = "( CTRL + P )";
-            toolTipItem15.Text = "Tabloya Yazdırma Seçenekleri";
-            toolTipItem16.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem16.Text = "Tabloya Yazdırma Seçenekleri Formu Açılır.";
-            superToolTip8.Items.Add(toolTipTitleItem8);
-            superToolTip8.Items.Add(toolTipItem15);
-            superToolTip8.Items.Add(toolTipItem16);
-            this.btnYazdir.SuperTip = superToolTip8;
+            toolTipTitleItem20.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem20.Text = "( CTRL + P )";
+            toolTipItem38.Text = "Tabloya Yazdırma Seçenekleri";
+            toolTipItem39.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem39.Text = "Tabloya Yazdırma Seçenekleri Formu Açılır.";
+            superToolTip20.Items.Add(toolTipTitleItem20);
+            superToolTip20.Items.Add(toolTipItem38);
+            superToolTip20.Items.Add(toolTipItem39);
+            this.btnYazdir.SuperTip = superToolTip20;
             // 
             // barButtonItem9
             // 
@@ -346,15 +355,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnCikis.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.close_32x32;
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.ShortcutKeyDisplayString = "Esc";
-            toolTipTitleItem9.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem9.Text = "( ESC )";
-            toolTipItem17.Text = "Çıkış";
-            toolTipItem18.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem18.Text = "Form Kapatılarak Çıkış İşlemi Yapılır.";
-            superToolTip9.Items.Add(toolTipTitleItem9);
-            superToolTip9.Items.Add(toolTipItem17);
-            superToolTip9.Items.Add(toolTipItem18);
-            this.btnCikis.SuperTip = superToolTip9;
+            toolTipTitleItem21.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem21.Text = "( ESC )";
+            toolTipItem40.Text = "Çıkış";
+            toolTipItem41.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem41.Text = "Form Kapatılarak Çıkış İşlemi Yapılır.";
+            superToolTip21.Items.Add(toolTipTitleItem21);
+            superToolTip21.Items.Add(toolTipItem40);
+            superToolTip21.Items.Add(toolTipItem41);
+            this.btnCikis.SuperTip = superToolTip21;
             // 
             // btnGonder
             // 
@@ -369,16 +378,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             new DevExpress.XtraBars.LinkPersistInfo(this.btnPdfDosyasi),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTxtDosyasi)});
             this.btnGonder.Name = "btnGonder";
-            toolTipTitleItem10.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
-            toolTipTitleItem10.Text = "( F12 )";
-            toolTipItem19.Text = "Dosyaya Gönder";
-            toolTipItem20.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
-            toolTipItem20.Text = "İlgili Tabloyu Belirlediğiniz Dosya Biçimine Göre\r\nDosyaya Aktarıp, Dosyayı Açar." +
+            toolTipTitleItem22.ImageOptions.ImageUri.Uri = "outlook%20inspired/about;Size16x16";
+            toolTipTitleItem22.Text = "( F12 )";
+            toolTipItem42.Text = "Dosyaya Gönder";
+            toolTipItem43.ImageOptions.ImageUri.Uri = "scheduling/reminder;Size16x16";
+            toolTipItem43.Text = "İlgili Tabloyu Belirlediğiniz Dosya Biçimine Göre\r\nDosyaya Aktarıp, Dosyayı Açar." +
     "";
-            superToolTip10.Items.Add(toolTipTitleItem10);
-            superToolTip10.Items.Add(toolTipItem19);
-            superToolTip10.Items.Add(toolTipItem20);
-            this.btnGonder.SuperTip = superToolTip10;
+            superToolTip22.Items.Add(toolTipTitleItem22);
+            superToolTip22.Items.Add(toolTipItem42);
+            superToolTip22.Items.Add(toolTipItem43);
+            this.btnGonder.SuperTip = superToolTip22;
             // 
             // btnExcelDosyalari
             // 
@@ -624,16 +633,34 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnAktifPasifKartlar.ItemAppearance.Pressed.Options.UseForeColor = true;
             this.btnAktifPasifKartlar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L));
             this.btnAktifPasifKartlar.Name = "btnAktifPasifKartlar";
-            toolTipTitleItem11.ImageOptions.ImageUri.Uri = "dashboards/tooltips";
-            toolTipTitleItem11.Text = "(Ctrl + L )";
-            toolTipItem21.Text = "Aktif Veya Pasif Kartları Listele";
-            toolTipItem22.ImageOptions.ImageUri.Uri = "icon%20builder/weather_sunny";
-            toolTipItem22.Text = "Aktif veya Pasif Kartları\r\nListeler.";
-            superToolTip11.Items.Add(toolTipTitleItem11);
-            superToolTip11.Items.Add(toolTipItem21);
-            superToolTip11.Items.Add(toolTipSeparatorItem1);
-            superToolTip11.Items.Add(toolTipItem22);
-            this.btnAktifPasifKartlar.SuperTip = superToolTip11;
+            toolTipTitleItem23.ImageOptions.ImageUri.Uri = "dashboards/tooltips";
+            toolTipTitleItem23.Text = "(Ctrl + L )";
+            toolTipItem44.Text = "Aktif Veya Pasif Kartları Listele";
+            toolTipItem45.ImageOptions.ImageUri.Uri = "icon%20builder/weather_sunny";
+            toolTipItem45.Text = "Aktif veya Pasif Kartları\r\nListeler.";
+            superToolTip23.Items.Add(toolTipTitleItem23);
+            superToolTip23.Items.Add(toolTipItem44);
+            superToolTip23.Items.Add(toolTipSeparatorItem3);
+            superToolTip23.Items.Add(toolTipItem45);
+            this.btnAktifPasifKartlar.SuperTip = superToolTip23;
+            // 
+            // btnBagliKartlar
+            // 
+            this.btnBagliKartlar.Caption = "Bağlı Kartlar";
+            this.btnBagliKartlar.Id = 40;
+            this.btnBagliKartlar.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.documentmap_16x16;
+            this.btnBagliKartlar.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.documentmap_32x32;
+            this.btnBagliKartlar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+            this.btnBagliKartlar.Name = "btnBagliKartlar";
+            toolTipTitleItem24.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem24.ImageOptions.ImageUri.Uri = "icon%20builder/weather_lightning";
+            toolTipTitleItem24.Text = "<b>( Ctrl +B )</b>";
+            toolTipItem46.Text = "Bağlı Kartları Listeler.";
+            superToolTip24.Items.Add(toolTipTitleItem24);
+            superToolTip24.Items.Add(toolTipSeparatorItem4);
+            superToolTip24.Items.Add(toolTipItem46);
+            this.btnBagliKartlar.SuperTip = superToolTip24;
+            this.btnBagliKartlar.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // ribbonPage1
             // 
@@ -651,6 +678,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYenile);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnFiltrele);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKolonlar);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnBagliKartlar);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnGonder);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
@@ -690,6 +718,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
+            // sagMenu
+            // 
+            this.sagMenu.ItemLinks.Add(this.btnYeni);
+            this.sagMenu.ItemLinks.Add(this.btnSil);
+            this.sagMenu.ItemLinks.Add(this.btnSec);
+            this.sagMenu.ItemLinks.Add(this.btnDuzelt);
+            this.sagMenu.ItemLinks.Add(this.btnYenile);
+            this.sagMenu.Name = "sagMenu";
+            this.sagMenu.Ribbon = this.ribbonControl;
+            // 
             // BaseListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -703,6 +741,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ShowInTaskbar = false;
             this.StatusBar = this.ribbonStatusBar1;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sagMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,12 +757,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         private DevExpress.XtraBars.BarButtonItem btnSec;
         private DevExpress.XtraBars.BarButtonItem btnDuzelt;
         private DevExpress.XtraBars.BarButtonItem btnYenile;
-        private DevExpress.XtraBars.BarButtonItem btnFiltrele;
-        private DevExpress.XtraBars.BarButtonItem btnKolonlar;
-        private DevExpress.XtraBars.BarButtonItem btnYazdir;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem btnCikis;
-        private DevExpress.XtraBars.BarSubItem btnGonder;
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.BarStaticItem barInsert;
         private DevExpress.XtraBars.BarStaticItem barInsertAciklama;
@@ -735,14 +770,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         private DevExpress.XtraBars.BarStaticItem barDuzeltAciklama;
         private DevExpress.XtraBars.BarStaticItem barYenile;
         private DevExpress.XtraBars.BarStaticItem barYenileAciklama;
-        private DevExpress.XtraBars.BarStaticItem barFiltrele;
-        private DevExpress.XtraBars.BarStaticItem barFiltreleAciklama;
-        private DevExpress.XtraBars.BarStaticItem barKolonlar;
-        private DevExpress.XtraBars.BarStaticItem barKolonlarAciklama;
-        private DevExpress.XtraBars.BarStaticItem barYazdir;
-        private DevExpress.XtraBars.BarStaticItem barYazdirAciklama;
-        private DevExpress.XtraBars.BarStaticItem barGonder;
-        private DevExpress.XtraBars.BarStaticItem barGonderAciklama;
         private DevExpress.XtraBars.BarStaticItem barCikis;
         private DevExpress.XtraBars.BarStaticItem barCikisAciklama;
         private DevExpress.XtraBars.BarButtonItem btnAktifPasifKartlar;
@@ -753,5 +780,19 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         private DevExpress.XtraBars.BarButtonItem btnWordDosyasi;
         private DevExpress.XtraBars.BarButtonItem btnPdfDosyasi;
         private DevExpress.XtraBars.BarButtonItem btnTxtDosyasi;
+        private DevExpress.XtraBars.PopupMenu sagMenu;
+        protected DevExpress.XtraBars.BarButtonItem btnBagliKartlar;
+        protected DevExpress.XtraBars.BarButtonItem btnFiltrele;
+        protected DevExpress.XtraBars.BarButtonItem btnKolonlar;
+        protected DevExpress.XtraBars.BarButtonItem btnYazdir;
+        protected DevExpress.XtraBars.BarSubItem btnGonder;
+        protected DevExpress.XtraBars.BarStaticItem barFiltrele;
+        protected DevExpress.XtraBars.BarStaticItem barFiltreleAciklama;
+        protected DevExpress.XtraBars.BarStaticItem barKolonlar;
+        protected DevExpress.XtraBars.BarStaticItem barKolonlarAciklama;
+        protected DevExpress.XtraBars.BarStaticItem barYazdir;
+        protected DevExpress.XtraBars.BarStaticItem barYazdirAciklama;
+        protected DevExpress.XtraBars.BarStaticItem barGonder;
+        protected DevExpress.XtraBars.BarStaticItem barGonderAciklama;
     }
 }

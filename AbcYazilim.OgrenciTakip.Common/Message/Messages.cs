@@ -37,6 +37,22 @@ namespace AbcYazilim.OgrenciTakip.Common.Message
         {
             UyariMesaji("Lütfen Bir Kart Seçiniz.");
         }
-        
+        public static void MukerrerKayitHataMesaji(string fieldName)
+        {
+            HataMesaji($"Girmiş Olduğunuz {fieldName} Daha Önce Kullanılmıştır.");
+        }
+        public static void HataliVeriMesaji(string fieldName)
+        {
+            HataMesaji($"{fieldName} Alanına Geçerli Bir Değer Girmelisiniz.");
+        }
+        public static DialogResult TabloExportMessage(string dosyaFormati)
+        {
+            return EvetSeciliEvetHayir($"İlgili Tablo, {dosyaFormati} olarak dışarı aktarılacaktır. Onaylıyor Musunuz? ", "Export Validation");
+        }
+        public static void KartBulunamadiMesaj(string kartTuru)
+        {
+            UyariMesaji($"İşlem Yapılabilecek {kartTuru} Bulunamadı.");
+        }
+
     }
 }

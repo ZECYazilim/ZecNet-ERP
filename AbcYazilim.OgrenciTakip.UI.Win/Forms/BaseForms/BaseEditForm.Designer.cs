@@ -29,6 +29,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -49,6 +50,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -58,11 +79,19 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.statusBarAciklama = new DevExpress.XtraBars.BarStaticItem();
             this.statusBarKisaYol = new DevExpress.XtraBars.BarStaticItem();
             this.statusBarKisaYolAciklama = new DevExpress.XtraBars.BarStaticItem();
+            this.btnFarkliKaydet = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUygula = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBaskiOnizleme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnResimEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnResimSil = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.resimPopupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resimPopupMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -80,9 +109,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnCikis,
             this.statusBarAciklama,
             this.statusBarKisaYol,
-            this.statusBarKisaYolAciklama});
+            this.statusBarKisaYolAciklama,
+            this.btnFarkliKaydet,
+            this.btnUygula,
+            this.btnYazdir,
+            this.btnBaskiOnizleme,
+            this.btnResimEkle,
+            this.btnResimSil});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 9;
+            this.ribbonControl.MaxItemId = 15;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -194,6 +229,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.statusBarAciklama.Id = 6;
             this.statusBarAciklama.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             this.statusBarAciklama.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.suggestion_32x32;
+            this.statusBarAciklama.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.statusBarAciklama.ItemAppearance.Normal.Options.UseForeColor = true;
             this.statusBarAciklama.Name = "statusBarAciklama";
             this.statusBarAciklama.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -201,13 +238,124 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             // 
             this.statusBarKisaYol.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.statusBarKisaYol.Id = 7;
+            this.statusBarKisaYol.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.statusBarKisaYol.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Green;
+            this.statusBarKisaYol.ItemAppearance.Normal.Options.UseFont = true;
+            this.statusBarKisaYol.ItemAppearance.Normal.Options.UseForeColor = true;
             this.statusBarKisaYol.Name = "statusBarKisaYol";
             // 
             // statusBarKisaYolAciklama
             // 
             this.statusBarKisaYolAciklama.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.statusBarKisaYolAciklama.Id = 8;
+            this.statusBarKisaYolAciklama.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Green;
+            this.statusBarKisaYolAciklama.ItemAppearance.Normal.Options.UseForeColor = true;
             this.statusBarKisaYolAciklama.Name = "statusBarKisaYolAciklama";
+            // 
+            // btnFarkliKaydet
+            // 
+            this.btnFarkliKaydet.Caption = "Farklı Kaydet";
+            this.btnFarkliKaydet.Id = 9;
+            this.btnFarkliKaydet.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.saveall_16x16;
+            this.btnFarkliKaydet.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.saveall_32x32;
+            this.btnFarkliKaydet.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F2));
+            this.btnFarkliKaydet.Name = "btnFarkliKaydet";
+            toolTipTitleItem6.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem6.ImageOptions.ImageUri.Uri = "dashboards/tooltips;Size16x16";
+            toolTipTitleItem6.Text = "<b>( Shift + F2 )</b>";
+            toolTipItem11.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem11.Text = "<b>Farklı Kaydet</b>";
+            toolTipItem12.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem12.ImageOptions.ImageUri.Uri = "icon%20builder/shopping_new;Size16x16";
+            toolTipItem12.Text = "<b>Formdaki mevcut bilgiler baz alınarak yeni bir\r\nkayıt oluşturulur.</b>";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem11);
+            superToolTip6.Items.Add(toolTipSeparatorItem1);
+            superToolTip6.Items.Add(toolTipItem12);
+            this.btnFarkliKaydet.SuperTip = superToolTip6;
+            this.btnFarkliKaydet.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnUygula
+            // 
+            this.btnUygula.Caption = "Uygula";
+            this.btnUygula.Id = 10;
+            this.btnUygula.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.insertrangefilter_16x16;
+            this.btnUygula.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.insertrangefilter_32x32;
+            this.btnUygula.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
+            this.btnUygula.Name = "btnUygula";
+            toolTipTitleItem7.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem7.ImageOptions.ImageUri.Uri = "dashboards/tooltips;Size16x16";
+            toolTipTitleItem7.Text = "<b>( F8 )</b>";
+            toolTipItem13.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem13.Text = "<b>Filtre Uygula</b>";
+            toolTipItem14.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem14.Text = "<b>Oluşturmuş olduğunuz filtre ilgili tabloya\r\nuygulanır.</b>";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem13);
+            superToolTip7.Items.Add(toolTipSeparatorItem2);
+            superToolTip7.Items.Add(toolTipItem14);
+            this.btnUygula.SuperTip = superToolTip7;
+            this.btnUygula.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnYazdir
+            // 
+            this.btnYazdir.Caption = "Yazdır";
+            this.btnYazdir.Id = 11;
+            this.btnYazdir.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.print_16x16;
+            this.btnYazdir.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.print_32x32;
+            this.btnYazdir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
+            this.btnYazdir.Name = "btnYazdir";
+            toolTipItem15.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem15.ImageOptions.ImageUri.Uri = "dashboards/tooltips;Size16x16";
+            toolTipItem15.Text = "<b>( Ctrl + P )</b>";
+            toolTipItem16.Text = "Yazdır";
+            toolTipItem17.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem17.ImageOptions.ImageUri.Uri = "icon%20builder/shopping_new";
+            toolTipItem17.Text = "<b>Formu Yazdırma Modunda Açar.</b>";
+            superToolTip8.Items.Add(toolTipItem15);
+            superToolTip8.Items.Add(toolTipItem16);
+            superToolTip8.Items.Add(toolTipSeparatorItem3);
+            superToolTip8.Items.Add(toolTipItem17);
+            this.btnYazdir.SuperTip = superToolTip8;
+            this.btnYazdir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnBaskiOnizleme
+            // 
+            this.btnBaskiOnizleme.Caption = "Baskı Önizleme";
+            this.btnBaskiOnizleme.Id = 12;
+            this.btnBaskiOnizleme.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.printpreview_16x16;
+            this.btnBaskiOnizleme.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.printpreview_32x32;
+            this.btnBaskiOnizleme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+            this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
+            toolTipTitleItem8.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem8.ImageOptions.ImageUri.Uri = "dashboards/tooltips";
+            toolTipTitleItem8.Text = "<b>( Ctrl + B )</b>";
+            toolTipItem18.Text = "Baskı Önizleme";
+            toolTipItem19.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem19.ImageOptions.ImageUri.Uri = "icon%20builder/shopping_new";
+            toolTipItem19.Text = "<b>Formu Baskı Önizleme Modunda Açar</b>";
+            superToolTip9.Items.Add(toolTipTitleItem8);
+            superToolTip9.Items.Add(toolTipItem18);
+            superToolTip9.Items.Add(toolTipSeparatorItem4);
+            superToolTip9.Items.Add(toolTipItem19);
+            this.btnBaskiOnizleme.SuperTip = superToolTip9;
+            this.btnBaskiOnizleme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnResimEkle
+            // 
+            this.btnResimEkle.Caption = "Resim Ekle";
+            this.btnResimEkle.Id = 13;
+            this.btnResimEkle.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnResimEkle.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
+            this.btnResimEkle.Name = "btnResimEkle";
+            // 
+            // btnResimSil
+            // 
+            this.btnResimSil.Caption = "Resim Sil";
+            this.btnResimSil.Id = 14;
+            this.btnResimSil.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16;
+            this.btnResimSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
+            this.btnResimSil.Name = "btnResimSil";
             // 
             // ribbonPage1
             // 
@@ -220,8 +368,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYeni);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKaydet);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnFarkliKaydet);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnGeriAl);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSil);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnUygula);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnBaskiOnizleme);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
@@ -241,7 +393,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // BaseKartForm
+            // resimPopupMenu
+            // 
+            this.resimPopupMenu.ItemLinks.Add(this.btnResimEkle);
+            this.resimPopupMenu.ItemLinks.Add(this.btnResimSil);
+            this.resimPopupMenu.Name = "resimPopupMenu";
+            this.resimPopupMenu.Ribbon = this.ribbonControl;
+            // 
+            // BaseEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,11 +408,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.MinimizeBox = false;
-            this.Name = "BaseKartForm";
+            this.Name = "BaseEditForm";
             this.Ribbon = this.ribbonControl;
             this.ShowInTaskbar = false;
             this.StatusBar = this.ribbonStatusBar1;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resimPopupMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,14 +424,21 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.BarButtonItem btnYeni;
-        private DevExpress.XtraBars.BarButtonItem btnKaydet;
-        private DevExpress.XtraBars.BarButtonItem btnGeriAl;
-        private DevExpress.XtraBars.BarButtonItem btnSil;
         private DevExpress.XtraBars.BarButtonItem btnCikis;
-        private DevExpress.XtraBars.BarStaticItem statusBarAciklama;
-        private DevExpress.XtraBars.BarStaticItem statusBarKisaYol;
-        private DevExpress.XtraBars.BarStaticItem statusBarKisaYolAciklama;
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
+        protected DevExpress.XtraBars.BarButtonItem btnGeriAl;
+        protected DevExpress.XtraBars.BarButtonItem btnFarkliKaydet;
+        protected DevExpress.XtraBars.BarButtonItem btnUygula;
+        protected DevExpress.XtraBars.BarButtonItem btnYeni;
+        protected DevExpress.XtraBars.BarButtonItem btnKaydet;
+        protected DevExpress.XtraBars.BarButtonItem btnSil;
+        protected DevExpress.XtraBars.BarButtonItem btnYazdir;
+        protected DevExpress.XtraBars.BarButtonItem btnBaskiOnizleme;
+        private DevExpress.XtraBars.BarButtonItem btnResimEkle;
+        private DevExpress.XtraBars.BarButtonItem btnResimSil;
+        protected DevExpress.XtraBars.PopupMenu resimPopupMenu;
+        protected internal DevExpress.XtraBars.BarStaticItem statusBarAciklama;
+        protected internal DevExpress.XtraBars.BarStaticItem statusBarKisaYol;
+        protected internal DevExpress.XtraBars.BarStaticItem statusBarKisaYolAciklama;
     }
 }

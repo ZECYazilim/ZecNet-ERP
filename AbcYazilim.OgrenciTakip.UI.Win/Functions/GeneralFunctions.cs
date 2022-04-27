@@ -1,10 +1,19 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
 using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Drawing.Printing;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
@@ -21,6 +30,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
         {
             if (tablo.FocusedRowHandle > -1) return (T)tablo.GetRow(tablo.FocusedRowHandle);
             if (mesajVer)
+                Messages.KartSecmemeUyariMesaji();
+            return default(T);
+        }
+        public static T GetRow<T>(this GridView tablo, int rowHandle)
+        {
+            if (tablo.FocusedRowHandle > -1) return (T)tablo.GetRow(rowHandle);
                 Messages.KartSecmemeUyariMesaji();
             return default(T);
         }
@@ -51,6 +66,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
             }
             return DataReplaceLocation.VeriDegisimDurumu; //false
         }
+        public static void ButtonEnabledSituation<T>(BarButtonItem btnKaydet, BarButtonItem btnFarkliKaydet, BarButtonItem btnSil, IslemTuru islemTuru, T oldEntity, T CurrentEntity)
+        {
+            var dataReplaceLocation = GetDataReplaceLocation(oldEntity, CurrentEntity);
+            var buttonEnabledSituation = dataReplaceLocation == DataReplaceLocation.Alan;
+
+            btnKaydet.Enabled = buttonEnabledSituation;
+            btnFarkliKaydet.Enabled = islemTuru != IslemTuru.EntityInsert;
+            btnSil.Enabled = !buttonEnabledSituation;
+        }
+        public static void ButtonEnabledSituation<T>(BarButtonItem btnNew, BarButtonItem btnSave, BarButtonItem btnUndo, BarButtonItem btnDelete, T oldEntity, T CurrentEntity, bool tableValueChanged)
+        {
+            var dataReplaceLocation = tableValueChanged?DataReplaceLocation.Tablo:GetDataReplaceLocation(oldEntity, CurrentEntity);
+            var buttonEnabledSituation = dataReplaceLocation == DataReplaceLocation.Alan || dataReplaceLocation==DataReplaceLocation.Tablo;
+
+
+            btnSave.Enabled = buttonEnabledSituation;
+            btnUndo.Enabled = buttonEnabledSituation;
+            btnNew.Enabled = !buttonEnabledSituation;
+            btnDelete.Enabled = !buttonEnabledSituation;
+        }
         public static void ButtonEnabledSituation<T>(BarButtonItem btnNew,BarButtonItem btnSave,BarButtonItem btnUndo,BarButtonItem btnDelete,T oldEntity,T CurrentEntity)
         {
             var dataReplaceLocation = GetDataReplaceLocation(oldEntity, CurrentEntity);
@@ -60,7 +95,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
             btnUndo.Enabled = buttonEnabledSituation;
             btnNew.Enabled = !buttonEnabledSituation;
             btnDelete.Enabled = !buttonEnabledSituation;
-        }
+        }   
         public static long IdOlustur(this IslemTuru islemTuru,BaseEntity selectedEntity)
         {
             string AddZero(string obj)
@@ -105,5 +140,86 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                     break;
             }
         }
+        public static void RowFocus(this GridView tablo,string aranacakKolon,object aranacakDeger)
+        {
+            var rowHandle = 0;
+
+            for (int i = 0; i < tablo.RowCount; i++)
+            {
+                var bulunanDeger = tablo.GetRowCellValue(i, aranacakKolon);
+                if (aranacakDeger.Equals(bulunanDeger))
+                    rowHandle = i;
+            }
+            tablo.FocusedRowHandle = rowHandle;
+        }
+        public static void RowFocus(this GridView tablo,int rowhandle)
+        {
+            if (rowhandle <= 0) return;
+            if (rowhandle == tablo.RowCount - 1)
+                tablo.FocusedRowHandle = rowhandle;
+            else
+                tablo.FocusedRowHandle = rowhandle - 1;
+        }
+        public static void SagMenuGoster(this MouseEventArgs e,PopupMenu sagMenu)
+        {
+            if (e.Button != MouseButtons.Right) return;
+            sagMenu.ShowPopup(Control.MousePosition);
+        }
+        public static List<string> YazicilariListele()
+        {
+            return PrinterSettings.InstalledPrinters.Cast<string>().ToList();
+        }
+        public static string DefaultPrtiner()
+        {
+            var settings = new PrinterSettings();
+            return settings.PrinterName;
+        }
+        public static void ShowPopupMenu(this MouseEventArgs e,PopupMenu popupMenu)
+        {
+            if (e.Button != MouseButtons.Right) return;
+            popupMenu.ShowPopup(Control.MousePosition);
+        }
+        public static byte[] ResimYukle()
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Resim Seçiniz.(ZEC Technology)",
+                Filter = "Resim Dosyaları (*.bmp, *.gif, *.jpg, *.png)|*.bmp; *.gif; *.jpg; *.png|Bmp Dosyaları|*.bmp|Gif Dosyaları|*.gif|Jpg Dosyaları|*.jpg|Png Dosyaları|*.png",
+                InitialDirectory = @"C:\"
+            };
+            byte[] Resim()
+            {
+                using (var stream = new MemoryStream())
+                {
+                    Image.FromFile(dialog.FileName).Save(stream, ImageFormat.Png);
+                    return stream.ToArray();
+                }
+            }
+            return dialog.ShowDialog() != DialogResult.OK ? null : Resim();
+        }
+        public static void RefreshDataSource(this GridView tablo)
+        {
+            var source = tablo.DataController.ListSource.Cast<IBaseHareketEntity>().ToList();
+            if (source.Any(x => x.Delete)) return;
+            var rowHandle = tablo.FocusedRowHandle;
+
+            tablo.CustomRowFilter += Tablo_CustomRowFilter;
+            tablo.RefreshData();
+            tablo.CustomRowFilter -= Tablo_CustomRowFilter;
+            tablo.RowFocus(rowHandle);
+            void Tablo_CustomRowFilter(object sender, RowFilterEventArgs e)
+            {
+                var entity = source[e.ListSourceRow];
+                if(entity==null) return;
+                if (!entity.Delete) return;
+                e.Visible = false;
+                e.Handled = true;
+            }
+        }
+        public static BindingList<T> ToBindingList<T>(this IEnumerable<BaseHareketEntity> list)
+        {
+            return new BindingList<T>((IList<T>)list);
+        }
+
     }
 }

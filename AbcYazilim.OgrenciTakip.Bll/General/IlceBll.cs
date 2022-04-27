@@ -1,4 +1,5 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.Base;
+using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Entities;
@@ -11,33 +12,10 @@ using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.Bll.General
 {
-    public class IlceBll: BaseBll<Ilce, OgrenciTakipContext>
+    public class IlceBll: BaseGenelBll<Ilce>,IBaseCommonBll
     {
-        public IlceBll(){}
-        public IlceBll(Control ctrl):base(ctrl){}
-        public BaseEntity Single(Expression<Func<Ilce, bool>> filter)
-        {
-            return BaseSingle(filter, x => x);
-        }
-        public IEnumerable<BaseEntity>List(Expression<Func<Ilce,bool>> filter) 
-        {
-            return BaseList(filter, x => x).OrderBy(x => x.Kod).ToList();
-        }
-        public bool Insert(BaseEntity entity,Expression<Func<Ilce,bool>>filter)
-        {
-            return BaseInsert(entity, filter);
-        }
-        public bool Update(BaseEntity oldEntity, BaseEntity currentEntity,Expression<Func<Ilce,bool>>filter)
-        {
-            return BaseUpdate(oldEntity, currentEntity,filter);
-        }
-        public bool Delete(BaseEntity entity)
-        {
-            return BaseDelete(entity, KartTuru.Ilce);
-        }
-        public string CreateNewCode(Expression<Func<Ilce, bool>> filter)
-        {
-            return BaseCreateNewCode(KartTuru.Ilce, x => x.Kod,filter);
-        }    
+        public IlceBll():base(KartTuru.Ilce){}
+        public IlceBll(Control ctrl):base(ctrl,KartTuru.Ilce){}
+        
     }
 }

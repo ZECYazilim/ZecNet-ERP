@@ -21,6 +21,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IlForms
             OldEntity = IslemTuru == IslemTuru.EntityInsert ? new Il() : ((IlBll)Bll).Single(FilterFunctions.filter<Il>(Id));
             NesneyiKontrollereBagla();
             if (IslemTuru != IslemTuru.EntityInsert) return;
+            Id = IslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((IlBll)Bll).CreateNewCode();
             txtIlAdi.Focus();
         }

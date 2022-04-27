@@ -29,6 +29,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IlceForms
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_ilAdi} )";
             if (IslemTuru != IslemTuru.EntityInsert) return;
+            Id = IslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((IlceBll)Bll).CreateNewCode(x=>x.IlId==_ilId);
             txtIlceAdi.Focus();
         }
@@ -51,6 +52,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IlceForms
                 Aciklama=txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
+            ButtonEnableSituation();
         }
         protected override bool EntityInsert()
         {
