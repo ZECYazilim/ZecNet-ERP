@@ -31,6 +31,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
 {
@@ -42,6 +43,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
         public static string SubeAdi = "Şube Bilgisi Bekleniyor.";
 
         public static DateTime EgitimBaslamaTarihi = new DateTime(2021, 09, 15);
+        public static DateTime DonemBaslamaTarihi = new DateTime(2021, 07, 01);
         public static DateTime DonemBitisTarihi = new DateTime(2022, 06, 30);
         public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = true;
         public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
@@ -124,6 +126,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
                 ShowListForms<OgrenciListForm>.ShowListForm(KartTuru.Ogrenci);
             else if (e.Item == btnIndirimKartlari)
                 ShowListForms<IndirimListForm>.ShowListForm(KartTuru.Indirim);
+            else if (e.Item == btnTahakkukKartlari)
+                ShowListForms<TahakkukListForm>.ShowListForm(KartTuru.Tahakkuk);
         }
     }
 }

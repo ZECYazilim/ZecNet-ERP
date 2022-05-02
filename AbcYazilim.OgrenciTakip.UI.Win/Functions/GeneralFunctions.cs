@@ -2,10 +2,13 @@
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,7 +98,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
             btnUndo.Enabled = buttonEnabledSituation;
             btnNew.Enabled = !buttonEnabledSituation;
             btnDelete.Enabled = !buttonEnabledSituation;
-        }   
+        }
+        public static void ButtonEnabledSituation(BarButtonItem btnNew, BarButtonItem btnSave, BarButtonItem btnUndo, BarButtonItem btnDelete)
+        {
+            btnSave.Enabled = false;
+            btnUndo.Enabled = false;
+            btnNew.Enabled = false;
+            btnDelete.Enabled = false;
+        }
         public static long IdOlustur(this IslemTuru islemTuru,BaseEntity selectedEntity)
         {
             string AddZero(string obj)
@@ -200,7 +210,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
         public static void RefreshDataSource(this GridView tablo)
         {
             var source = tablo.DataController.ListSource.Cast<IBaseHareketEntity>().ToList();
-            if (source.Any(x => x.Delete)) return;
+            if (!source.Any(x => x.Delete)) return;
             var rowHandle = tablo.FocusedRowHandle;
 
             tablo.CustomRowFilter += Tablo_CustomRowFilter;
@@ -219,6 +229,25 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
         public static BindingList<T> ToBindingList<T>(this IEnumerable<BaseHareketEntity> list)
         {
             return new BindingList<T>((IList<T>)list);
+        }
+        public static BaseTablo AddTable(this BaseTablo tablo,BaseEditForm frm)
+        {
+            tablo.Dock = DockStyle.Fill;
+            tablo.OwnerForm = frm;
+            return tablo;
+        }
+        public static void LayoutControlInsert(this LayoutGroup group,Control control,int columnIndex,int rowIndex,int columnSpan,int rowSpan)
+        {
+            var item = new LayoutControlItem
+            {
+                Control = control,
+                Parent=group
+            };
+            item.OptionsTableLayoutItem.ColumnIndex = columnIndex;
+            item.OptionsTableLayoutItem.RowIndex = rowIndex;
+            item.OptionsTableLayoutItem.ColumnSpan = columnSpan;
+            item.OptionsTableLayoutItem.RowSpan = rowSpan;
+
         }
 
     }

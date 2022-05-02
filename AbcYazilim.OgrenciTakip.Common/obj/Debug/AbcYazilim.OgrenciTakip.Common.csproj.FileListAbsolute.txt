@@ -40,7 +40,6 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Commo
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
-C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.csproj.AssemblyReference.cache
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.csproj.CoreCompileInputs.cache
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.csproj.CopyComplete
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.dll

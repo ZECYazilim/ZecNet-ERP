@@ -15,7 +15,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.HizmetForms
 {
     public partial class HizmetListForm : BaseListForm
     {
-        private readonly Expression<Func<Hizmet, bool>> _filter;
+        #region Variables
+        private readonly Expression<Func<Hizmet, bool>> _filter; 
+        #endregion
 
         public HizmetListForm()
         {
@@ -30,7 +32,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.HizmetForms
                 var panelGoster = (bool)prm[0];
                 panelControl1.Visible = DateTime.Now.Date > AnaForm.EgitimBaslamaTarihi && panelGoster;
             }    
-            _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id)&&x.SubeId==AnaForm.SubeId&&x.DonemId==AnaForm.DonemId;
+            _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id)&&x.SubeId==AnaForm.SubeId&&x.DonemId==AnaForm.DonemId && x.Durum == AktifKartlariGoster;
         }
         protected override void DegiskenleriDoldur()
         {
@@ -62,7 +64,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.HizmetForms
         {
             base.SelectEntity();
             if(MultiSelect)
-             SelectedEntities.ForEach(x => ((HizmetL)x).BaslamaTarihi = txtHizmetBaslamaTarihi.DateTime.Date);
+                SelectedEntities.ForEach(x => ((HizmetL)x).BaslamaTarihi = txtHizmetBaslamaTarihi.DateTime.Date);
         }
 
     }

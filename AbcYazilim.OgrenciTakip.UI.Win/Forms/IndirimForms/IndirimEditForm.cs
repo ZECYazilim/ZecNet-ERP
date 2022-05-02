@@ -71,6 +71,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimForms
             if (HizmetTablo.HataliGiris()) return false;
             return ((IndirimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId)&&HizmetTablo.Kaydet();
         }
+        
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;

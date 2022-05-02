@@ -57,6 +57,7 @@
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\ValidationFunctions.cs" />
     <Compile Include="General\AileBilgiBll.cs" />
+    <Compile Include="General\AileBilgileriBll.cs" />
     <Compile Include="General\AvukatBll.cs" />
     <Compile Include="General\BankaBll.cs" />
     <Compile Include="General\BankaHesapBll.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="General\IndirimTuruBll.cs" />
     <Compile Include="General\IptalNedeniBll.cs" />
     <Compile Include="General\IsyeriBll.cs" />
+    <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="General\ServisBll.cs" />
     <Compile Include="General\SinifBll.cs" />
     <Compile Include="General\SinifGrupBll.cs" />
+    <Compile Include="General\TahakkukBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
     <Compile Include="General\YabanciDilBll.cs" />
     <Compile Include="General\YakinlikBll.cs" />

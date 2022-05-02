@@ -9,9 +9,15 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IlceForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IlForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OzelKodForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.RehberForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
@@ -199,6 +205,66 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.IndirimTuruAdi;
+                        }
+                    }
+                    break;
+                case "txtSinif":
+                    {
+                        var entity = (SinifL)ShowListForms<SinifListForm>.ShowDialogListForm(kartTuru: KartTuru.Sinif, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.SinifAdi;
+                        }
+                    }
+                    break;
+                case "txtYabanciDil":
+                    {
+                        var entity = (YabanciDil)ShowListForms<YabanciDilListForm>.ShowDialogListForm(kartTuru: KartTuru.YabanciDil, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.DilAdi;
+                        }
+                    }
+                    break;
+                case "txtGeldigiOkul":
+                    {
+                        var entity = (OkulL)ShowListForms<OkulListForm>.ShowDialogListForm(kartTuru: KartTuru.Okul, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.OkulAdi;
+                        }
+                    }
+                    break;
+                case "txtKontenjan":
+                    {
+                        var entity = (Kontenjan)ShowListForms<KontenjanListForm>.ShowDialogListForm(kartTuru: KartTuru.Kontenjan, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.KontenjanAdi;
+                        }
+                    }
+                    break;
+                case "txtTesvik":
+                    {
+                        var entity = (Tesvik)ShowListForms<TesvikListForm>.ShowDialogListForm(kartTuru: KartTuru.Tesvik, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.TesvikAdi;
+                        }
+                    }
+                    break;
+                case "txtRehber":
+                    {
+                        var entity = (Rehber)ShowListForms<RehberListForm>.ShowDialogListForm(kartTuru: KartTuru.Rehber, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.AdiSoyadi;
                         }
                     }
                     break;

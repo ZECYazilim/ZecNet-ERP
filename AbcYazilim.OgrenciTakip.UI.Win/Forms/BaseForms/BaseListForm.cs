@@ -225,7 +225,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             if(MultiSelect)
             {
                 SelectedEntities = new List<BaseEntity>();
-                if(RowSelect.SelectedRowCount()==0)
+                if(RowSelect.SelectedRowCount==0)
                 {
                     Messages.KartSecmemeUyariMesaji();
                     return;
@@ -333,6 +333,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
                 else
                     Tablo.HideCustomization();
             }
+            else if (e.Item==btnTahakkukYap)
+            {
+                TahakkukYap();
+            }
             else if (e.Item == btnBagliKartlar)
             {
                 BagliKartAc();
@@ -351,6 +355,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             }
             Cursor.Current = DefaultCursor;
         }
+
+        protected virtual void TahakkukYap(){ }
 
         protected virtual void BagliKartAc(){}
 

@@ -1,5 +1,6 @@
 ﻿using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,5 +21,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public IndirimTuruu IndirimTuru { get; set; }
         public Sube Sube { get; set; }
         public Donem Donem { get; set; }
+        [InverseProperty("Indirim")]
+        public ICollection<IndiriminUygulanacagiHizmetBilgileri> IndiriminUygulanacagiHizmetBilgileri { get; set; }
     }
 }

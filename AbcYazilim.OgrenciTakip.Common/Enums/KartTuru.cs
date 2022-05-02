@@ -69,6 +69,8 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         [Description("Öğrenci Kartı")]
         Ogrenci = 32,
         [Description("İndirim Kartı")]
-        Indirim = 33
+        Indirim = 33,
+        [Description("Tahakkuk Kartı")]
+        Tahakkuk = 34
     }
 }

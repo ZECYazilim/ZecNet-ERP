@@ -86,9 +86,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.IndirimEditFor
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisaYol = null;
-            this.tablo.StatusBarKisaYolAciklama = null;
+            this.tablo.StatusBarAciklama = "Bu indirimin uygulanacağı hizmet kartlarını seçiniz.";
+            this.tablo.StatusBarKisaYol = "( Shift + Insert)";
+            this.tablo.StatusBarKisaYolAciklama = " Hizmet Kartı Ekleyiniz.";
             this.tablo.ViewCaption = "İndirimin Uygulanacağı Hizmetler";
             // 
             // colHizmetAdi
@@ -116,9 +116,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.IndirimEditFor
             this.colIndirimTutari.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIndirimTutari.OptionsFilter.AllowAutoFilter = false;
             this.colIndirimTutari.OptionsFilter.AllowFilter = false;
-            this.colIndirimTutari.StatusBarAciklama = null;
-            this.colIndirimTutari.StatusBarKisaYol = null;
-            this.colIndirimTutari.StatusBarKisaYolAciklama = null;
+            this.colIndirimTutari.StatusBarAciklama = "İndirim Tutarı Giriniz.";
+            this.colIndirimTutari.StatusBarKisaYol = "F4:";
+            this.colIndirimTutari.StatusBarKisaYolAciklama = " Hesap Makinesi";
             this.colIndirimTutari.Visible = true;
             this.colIndirimTutari.VisibleIndex = 1;
             // 
@@ -145,7 +145,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.IndirimEditFor
             this.colIndirimOrani.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIndirimOrani.OptionsFilter.AllowAutoFilter = false;
             this.colIndirimOrani.OptionsFilter.AllowFilter = false;
-            this.colIndirimOrani.StatusBarAciklama = null;
+            this.colIndirimOrani.StatusBarAciklama = "İndirim Oranı Giriniz.";
             this.colIndirimOrani.StatusBarKisaYol = null;
             this.colIndirimOrani.StatusBarKisaYolAciklama = null;
             this.colIndirimOrani.Visible = true;
@@ -161,6 +161,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.IndirimEditFor
             this.repositoryOran.EditFormat.FormatString = "n0";
             this.repositoryOran.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repositoryOran.Mask.EditMask = "n0";
+            this.repositoryOran.MaxValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.repositoryOran.Name = "repositoryOran";
             // 
             // IndiriminUygulanacagiHizmetlerTable

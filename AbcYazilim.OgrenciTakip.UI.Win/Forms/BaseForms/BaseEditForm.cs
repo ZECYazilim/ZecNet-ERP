@@ -14,6 +14,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
 using DevExpress.XtraPrinting;
 using DevExpress.Utils.Extensions;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
+using DevExpress.XtraBars.Navigation;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
 {
@@ -33,7 +34,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         protected BarItem[] HideItems;
         protected internal IslemTuru IslemTuru;
         protected internal long Id;
-        protected internal bool RefreshControl; 
+        protected internal bool RefreshControl;
+        protected bool FarkliSubeIslemi;
         #endregion
 
         public BaseEditForm()
@@ -75,6 +77,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
                     case BaseEdit edt:
                         edt.EditValueChanged += Control_EditValueChanged;
                         break;
+                    case TabPane tab:
+                        tab.SelectedPageChanged += Control_SelectedPageChanged;
+                        break;
                 }
             }
             if (DataLayoutControls == null)
@@ -89,9 +94,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
                     foreach (Control ctrl in layout.Controls)
                         ControlEvents(ctrl);
         }
-
-   
-
         private void EntityDelete()
         {
             if (!((IBaseCommonBll)Bll).Delete(OldEntity)) return;
@@ -297,7 +299,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             GuncelNesneOlustur();
             SablonYukle();
             ButonGizleGoster();
-            //Güncelleme Yapılacak
+            if (FarkliSubeIslemi)
+                Messages.UyariMesaji("İşlem Yapılan Kart Çalışılan Şube Veya Dönemde Olmadığı İçin Yapılan Değişiklikler Kayıt Edilemez.");
         }
 
         private void Item_ItemClick(object sender, ItemClickEventArgs e)
@@ -340,7 +343,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
                 Close();
             Cursor.Current = DefaultCursor;
         }
-
-     
+        protected virtual void BagliTabloYukle() { }
+        protected virtual bool BagliTabloKaydet() { return false; }
+        protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e){ }
     }
 }

@@ -32,13 +32,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.components = new System.ComponentModel.Container();
             this.insUptNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.InsUptNavigator();
             this.sagMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnHareketEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHareketSil = new DevExpress.XtraBars.BarButtonItem();
             this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.btnHareketEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.btnHareketSil = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKartDuzenle = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.sagMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +56,27 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             // sagMenu
             // 
             this.sagMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketEkle)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketEkle),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketSil),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnKartDuzenle)});
             this.sagMenu.Manager = this.barManager;
             this.sagMenu.Name = "sagMenu";
+            // 
+            // btnHareketEkle
+            // 
+            this.btnHareketEkle.Caption = "Hareket Ekle";
+            this.btnHareketEkle.Id = 0;
+            this.btnHareketEkle.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnHareketEkle.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Insert));
+            this.btnHareketEkle.Name = "btnHareketEkle";
+            // 
+            // btnHareketSil
+            // 
+            this.btnHareketSil.Caption = "Hareket Sil";
+            this.btnHareketSil.Id = 1;
+            this.btnHareketSil.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16;
+            this.btnHareketSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Delete));
+            this.btnHareketSil.Name = "btnHareketSil";
             // 
             // barManager
             // 
@@ -67,8 +87,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.barManager.Form = this;
             this.barManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnHareketEkle,
-            this.btnHareketSil});
-            this.barManager.MaxItemId = 2;
+            this.btnHareketSil,
+            this.btnKartDuzenle,
+            this.barButtonItem2});
+            this.barManager.MaxItemId = 4;
             // 
             // barDockControlTop
             // 
@@ -102,21 +124,20 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.barDockControlRight.Manager = this.barManager;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 230);
             // 
-            // btnHareketEkle
+            // btnKartDuzenle
             // 
-            this.btnHareketEkle.Caption = "Hareket Ekle";
-            this.btnHareketEkle.Id = 0;
-            this.btnHareketEkle.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
-            this.btnHareketEkle.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Insert));
-            this.btnHareketEkle.Name = "btnHareketEkle";
+            this.btnKartDuzenle.Caption = "Kart Düzenle";
+            this.btnKartDuzenle.Id = 2;
+            this.btnKartDuzenle.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.edit_16x16;
+            this.btnKartDuzenle.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
+            this.btnKartDuzenle.Name = "btnKartDuzenle";
+            this.btnKartDuzenle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
-            // btnHareketSil
+            // barButtonItem2
             // 
-            this.btnHareketSil.Caption = "Hareket Sil";
-            this.btnHareketSil.Id = 1;
-            this.btnHareketSil.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16;
-            this.btnHareketSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Delete));
-            this.btnHareketSil.Name = "btnHareketSil";
+            this.barButtonItem2.Caption = "btnKartDuzenle";
+            this.barButtonItem2.Id = 3;
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // BaseTablo
             // 
@@ -147,5 +168,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnHareketSil;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        protected DevExpress.XtraBars.BarButtonItem btnKartDuzenle;
     }
 }

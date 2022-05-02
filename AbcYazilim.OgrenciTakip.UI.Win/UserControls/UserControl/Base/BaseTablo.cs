@@ -21,7 +21,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
     {
         private bool _isLoaded;
         private bool _tabloSablonKayitEdilecek;
-        protected GridView Tablo;
+        protected internal GridView Tablo;
         protected internal BaseEditForm OwnerForm;
         protected internal bool TableValueChanged;
         protected BarItem[] ShowItems;
@@ -51,8 +51,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.ColumnPositionChanged += Tablo_SablonChanged;
             Tablo.ColumnWidthChanged += Tablo_SablonChanged;
             Tablo.EndSorting += Tablo_SablonChanged;
+            Tablo.DoubleClick += Tablo_DoubleClick;
 
         }
+
         protected internal void Yukle()
         {
             _isLoaded = true;
@@ -62,7 +64,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             SablonYukle();
             Listele();
             ButonGizleGoster();
-            //Tablo_LostFocus(Tablo, EventArgs.Empty);
+            Tablo_LostFocus(Tablo, EventArgs.Empty);
         }
         private void SablonKaydet()
         {
@@ -85,6 +87,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
         {
             if (Tablo.DataRowCount == 0) return;
             if (Messages.SilMesaj("İşlem Satırı") != DialogResult.Yes) return;
+
             Tablo.GetRow<IBaseHareketEntity>().Delete = true;
             Tablo.RefreshDataSource();
             ButtonEnabledDurumu(true);
@@ -95,8 +98,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             OwnerForm.ButtonEnableSituation();
         }
         protected internal virtual bool HataliGiris() { return false; }
+        protected virtual void OpenEntity() { }
         protected internal bool Kaydet()
         {
+            insUptNavigator.Navigator.Buttons.DoClick(insUptNavigator.Navigator.Buttons.EndEdit);
             var source = Tablo.DataController.ListSource;
 
             var insert = source.Cast<IBaseHareketEntity>().Where(x => x.Insert && !x.Delete).Cast<BaseHareketEntity>().ToList();
@@ -116,7 +121,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                     return false;
                 }
             if (delete.Any())
-                if (!((IBaseHareketGenelBll)Bll).Insert(delete))
+                if (!((IBaseHareketGenelBll)Bll).Delete(delete))
                 {
                     Messages.HataMesaji($"{Tablo.ViewCaption} Tablosundaki hareketler silinemedi.");
                     return false;
@@ -132,6 +137,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 HareketEkle();
             else if (e.Item == btnHareketSil)
                 HareketSil();
+            else if (e.Item == btnKartDuzenle)
+                OpenEntity();
             Cursor.Current = DefaultCursor;
         }       
         private void Navigator_ButtonClick(object sender, NavigatorButtonClickEventArgs e)
@@ -141,8 +148,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             else if (e.Button == insUptNavigator.Navigator.Buttons.Remove)
                 HareketSil();
 
-            //if (e.Button == insUptNavigator.Navigator.Buttons.Append || e.Button == insUptNavigator.Navigator.Buttons.Remove)
-            //    e.Handled = true;
+            if (e.Button == insUptNavigator.Navigator.Buttons.Append || e.Button == insUptNavigator.Navigator.Buttons.Remove)
+                e.Handled = true;
         }
         private void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
@@ -159,6 +166,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             if (sagMenu == null) return;
 
             btnHareketSil.Enabled = Tablo.RowCount >0;
+            btnKartDuzenle.Enabled = Tablo.RowCount > 0;
 
             e.SagMenuGoster(sagMenu);
         }
@@ -199,6 +207,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 case Keys.Delete when e.Shift:
                     HareketSil();
                     break;
+                case Keys.F3:
+                    OpenEntity();
+                    break;
             }
         }
         private void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
@@ -215,17 +226,21 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 OwnerForm.statusBarKisaYol.Visibility = BarItemVisibility.Always;
                 OwnerForm.statusBarKisaYolAciklama.Visibility = BarItemVisibility.Always;
 
-                OwnerForm.statusBarAciklama.Caption = ((IStatusBarKisaYol)sender).StatusBarAciklama;
-                OwnerForm.statusBarKisaYol.Caption = ((IStatusBarKisaYol)sender).StatusBarKisaYol;
-                OwnerForm.statusBarKisaYolAciklama.Caption = ((IStatusBarKisaYol)sender).StatusBarKisaYolAciklama;
+                OwnerForm.statusBarAciklama.Caption = ((IStatusBarKisaYol)e.FocusedColumn).StatusBarAciklama;
+                OwnerForm.statusBarKisaYol.Caption = ((IStatusBarKisaYol)e.FocusedColumn).StatusBarKisaYol;
+                OwnerForm.statusBarKisaYolAciklama.Caption = ((IStatusBarKisaYol)e.FocusedColumn).StatusBarKisaYolAciklama;
             }
             else if (((IStatusBarKisaYol)e.FocusedColumn).StatusBarAciklama!=null)
-                OwnerForm.statusBarKisaYolAciklama.Caption = ((IStatusBarKisaYol)sender).StatusBarKisaYolAciklama;
+                OwnerForm.statusBarAciklama.Caption = ((IStatusBarKisaYol)e.FocusedColumn).StatusBarAciklama;
         }
         private void Tablo_SablonChanged(object sender, EventArgs e)
         {
             _tabloSablonKayitEdilecek = true;
             SablonKaydet();
+        }
+        private void Tablo_DoubleClick(object sender, EventArgs e)
+        {
+            OpenEntity();
         }
     }
 }
