@@ -1,5 +1,6 @@
 ﻿using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbcYazilim.OgrenciTakip.Model.Entities
 {

@@ -22,6 +22,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
         private readonly Ogrenci _ogrenci;
         private BaseTablo _kardesBilgileriTable;
         private BaseTablo _aileBilgileriTable;
+        private BaseTablo _sinavBilgileriTable;
+        private BaseTablo _evrakBilgileriTable;
+        private BaseTablo _promosyonBilgileriTable;
+        private BaseTablo _iletisimBilgileriTable;
         public TahakkukEditForm()
         {
             InitializeComponent();
@@ -69,6 +73,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 _kardesBilgileriTable.Yukle();
             else if (_aileBilgileriTable != null)
                 _aileBilgileriTable.Yukle();
+            else if (_sinavBilgileriTable != null)
+                _sinavBilgileriTable.Yukle();
+            else if (_evrakBilgileriTable != null)
+                _evrakBilgileriTable.Yukle();
+            else if (_promosyonBilgileriTable != null)
+                _promosyonBilgileriTable.Yukle();
+            else if (_iletisimBilgileriTable != null)
+                _iletisimBilgileriTable.Yukle();
         }
         protected override void NesneyiKontrollereBagla()
         {
@@ -141,6 +153,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
         }
         protected override bool EntityInsert()
         {
+            if (BagliTabloHataliGirisKontrol()) return false;
             var result= ((TahakkukBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId)&&BagliTabloKaydet();
 
             if (result)
@@ -150,11 +163,30 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
         }
         protected override bool EntityUpdate()
         {
+            if (BagliTabloHataliGirisKontrol()) return false;
             var result = ((TahakkukBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && BagliTabloKaydet();
 
             if (result)
                 BagliTabloYukle();
             return result;
+        }
+        protected override bool BagliTabloHataliGirisKontrol()
+        {
+            if (_sinavBilgileriTable != null && _sinavBilgileriTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageAileSinavBilgileri;
+                _sinavBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
+            if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageIletisimBilgileri;
+                _iletisimBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
+            //devamı gelecek
+
+            return false;
         }
         protected override void SecimYap(object sender)
         {
@@ -191,6 +223,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             {
                 if (_kardesBilgileriTable != null && _kardesBilgileriTable.TableValueChanged) return true;
                 if (_aileBilgileriTable != null && _aileBilgileriTable.TableValueChanged) return true;
+                if (_sinavBilgileriTable != null && _sinavBilgileriTable.TableValueChanged) return true;
+                if (_evrakBilgileriTable != null && _evrakBilgileriTable.TableValueChanged) return true;
+                if (_promosyonBilgileriTable != null && _promosyonBilgileriTable.TableValueChanged) return true;
+                if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
                 return false;
             }
 
@@ -203,6 +239,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
         {
             if (_kardesBilgileriTable != null && !_kardesBilgileriTable.Kaydet()) return false;
             if (_aileBilgileriTable != null && !_aileBilgileriTable.Kaydet()) return false;
+            if (_sinavBilgileriTable != null && !_sinavBilgileriTable.Kaydet()) return false;
+            if (_evrakBilgileriTable != null && !_evrakBilgileriTable.Kaydet()) return false;
+            if (_promosyonBilgileriTable != null && !_promosyonBilgileriTable.Kaydet()) return false;
+            if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
             
             return true;
         }
@@ -230,8 +270,36 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                     _aileBilgileriTable = new AileBilgileriTable().AddTable(this);
                     layoutControlAileSinavBilgileri.LayoutControlInsert(_aileBilgileriTable, 0, 0, 0, 0);
                     _aileBilgileriTable.Yukle();
+
+                    _sinavBilgileriTable = new SinavBilgileriTable().AddTable(this);
+                    layoutControlAileSinavBilgileri.LayoutControlInsert(_sinavBilgileriTable, 1, 0, 0, 0);
+                    _sinavBilgileriTable.Yukle();
                 }
                 _aileBilgileriTable.Tablo.GridControl.Focus();
+            }
+            else if (e.Page == pageEvrakPromosyonBilgileri)
+            {
+                if (layoutControlEvrakPromosyonBilgileri.Items.Count == 0)
+                {
+                    _evrakBilgileriTable = new EvrakBilgileriTable().AddTable(this);
+                    layoutControlEvrakPromosyonBilgileri.LayoutControlInsert(_evrakBilgileriTable, 0, 0, 0, 0);
+                    _evrakBilgileriTable.Yukle();
+
+                    _promosyonBilgileriTable = new PromosyonBilgileriTable().AddTable(this);
+                    layoutControlEvrakPromosyonBilgileri.LayoutControlInsert(_promosyonBilgileriTable, 1, 0, 0, 0);
+                    _promosyonBilgileriTable.Yukle();
+                }
+                _evrakBilgileriTable.Tablo.GridControl.Focus();
+            }
+            else if (e.Page == pageIletisimBilgileri)
+            {
+                if (pageIletisimBilgileri.Controls.Count == 0)
+                {
+                    _iletisimBilgileriTable = new IletisimBilgileriTable().AddTable(this);
+                    pageIletisimBilgileri.Controls.Add(_iletisimBilgileriTable);
+                    _iletisimBilgileriTable.Yukle();
+                }
+                _iletisimBilgileriTable.Tablo.GridControl.Focus();
             }
         }
     }

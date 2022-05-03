@@ -346,16 +346,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnResimEkle.Caption = "Resim Ekle";
             this.btnResimEkle.Id = 13;
             this.btnResimEkle.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
-            this.btnResimEkle.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnResimEkle.Name = "btnResimEkle";
+            this.btnResimEkle.ShortcutKeyDisplayString = "Insert";
             // 
             // btnResimSil
             // 
             this.btnResimSil.Caption = "Resim Sil";
             this.btnResimSil.Id = 14;
             this.btnResimSil.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16;
-            this.btnResimSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnResimSil.Name = "btnResimSil";
+            this.btnResimSil.ShortcutKeyDisplayString = "Delete";
             // 
             // ribbonPage1
             // 

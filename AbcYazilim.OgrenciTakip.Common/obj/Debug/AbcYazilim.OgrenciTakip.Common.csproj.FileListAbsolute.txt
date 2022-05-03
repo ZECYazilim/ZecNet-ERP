@@ -44,3 +44,4 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Commo
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.csproj.CopyComplete
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.dll
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.pdb
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.Common\obj\Debug\AbcYazilim.OgrenciTakip.Common.csproj.AssemblyReference.cache

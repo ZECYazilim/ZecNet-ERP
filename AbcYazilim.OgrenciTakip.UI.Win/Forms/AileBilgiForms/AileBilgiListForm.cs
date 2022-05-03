@@ -20,7 +20,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AileBilgiForms
             InitializeComponent();
             Bll = new AileBilgiBll();
             _filter = x => x.Durum == AktifKartlariGoster;
-
         }
         public AileBilgiListForm(params object[] prm):this()
         {

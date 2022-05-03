@@ -14,6 +14,8 @@ using System.Linq;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System.Collections.Generic;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraEditors.Repository;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
 {
@@ -38,6 +40,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             foreach (BarItem button in barManager.Items)
                 button.ItemClick += Button_ItemClick;
 
+            foreach(GridColumn column in Tablo.Columns)
+            {
+                if (column.ColumnEdit == null) continue;
+                var type = column.ColumnEdit.GetType();
+
+                if(type==typeof(RepositoryItemImageComboBox))
+                    ((RepositoryItemImageComboBox)column.ColumnEdit).SelectedValueChanged += ImageComboBox_SelectedValueChanged;
+                if(type==typeof(RepositoryItemCheckEdit))
+                    ((RepositoryItemCheckEdit)column.ColumnEdit).CheckedChanged += CheckEdit_CheckedChanged;
+            }
             //Navigator Events
             insUptNavigator.Navigator.ButtonClick += Navigator_ButtonClick;
 
@@ -54,7 +66,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.DoubleClick += Tablo_DoubleClick;
 
         }
-
         protected internal void Yukle()
         {
             _isLoaded = true;
@@ -140,7 +151,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             else if (e.Item == btnKartDuzenle)
                 OpenEntity();
             Cursor.Current = DefaultCursor;
-        }       
+        }
+        protected virtual void ImageComboBox_SelectedValueChanged(object sender, EventArgs e){}
+        protected virtual void CheckEdit_CheckedChanged(object sender, EventArgs e){} 
         private void Navigator_ButtonClick(object sender, NavigatorButtonClickEventArgs e)
         {
             if (e.Button == insUptNavigator.Navigator.Buttons.Append)
@@ -204,7 +217,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 case Keys.Insert when e.Shift:
                     HareketEkle();
                     break;
-                case Keys.Delete when e.Shift:
+                case Keys.Delete when e.Modifiers == Keys.Shift://e.Shift:
                     HareketSil();
                     break;
                 case Keys.F3:
@@ -212,7 +225,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                     break;
             }
         }
-        private void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
+        protected virtual void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
         {
             if (OwnerForm == null) return;
             OwnerForm.statusBarKisaYol.Visibility = BarItemVisibility.Never;

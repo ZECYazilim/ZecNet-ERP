@@ -186,3 +186,7 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Wi
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.exe
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.pdb
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.AileBilgileriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.SinavBilgileriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.EvrakBilgileriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.PromosyonBilgileriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.IletisimBilgileriTable.resources

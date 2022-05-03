@@ -345,6 +345,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         }
         protected virtual void BagliTabloYukle() { }
         protected virtual bool BagliTabloKaydet() { return false; }
+        protected virtual bool BagliTabloHataliGirisKontrol() { return false; }
         protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e){ }
     }
 }

@@ -6,6 +6,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
@@ -28,6 +29,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
             if (tablo.FocusedRowHandle > -1) return (long)tablo.GetFocusedRowCellValue("Id");
             Messages.KartSecmemeUyariMesaji();
             return -1;
+        }
+        public static long GetRowCellId(this GridView tablo,GridColumn idColumn)
+        {
+            var value = tablo.GetRowCellValue(tablo.FocusedRowHandle, idColumn);
+            return (long?)value ?? -1;
         }
         public static T GetRow<T>(this GridView tablo,bool mesajVer=true)
         {

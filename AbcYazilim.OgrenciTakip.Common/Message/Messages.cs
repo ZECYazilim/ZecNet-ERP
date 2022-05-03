@@ -53,6 +53,9 @@ namespace AbcYazilim.OgrenciTakip.Common.Message
         {
             UyariMesaji($"İşlem Yapılabilecek {kartTuru} Bulunamadı.");
         }
-
+        public static void TabloEksikBilgiMesaj(string tabloAdi)
+        {
+            UyariMesaji($"{tabloAdi}nda Eksik Bilgi Girişi Var. Lütfen Kontrol Ediniz.");
+        }
     }
 }
