@@ -1,5 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraEditors;
@@ -103,6 +105,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         {
                             _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
                             _tablo.SetFocusedRowCellValue(_nameColumn, entity.YakinlikAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+                case "repositoryBanka":
+                    {
+                        var id = _tablo.GetRowCellId(_idColumn);//.GetRowCellValue(_tablo.FocusedRowHandle, _idColumn);
+                        var entity = (BankaL)ShowListForms<BankaListForm>.ShowDialogListForm(kartTuru: KartTuru.Banka, id);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.BankaAdi);
                             _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
                         }
                     }

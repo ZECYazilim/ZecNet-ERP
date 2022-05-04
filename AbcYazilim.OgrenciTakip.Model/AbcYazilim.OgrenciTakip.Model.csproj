@@ -55,6 +55,7 @@
     <Compile Include="Dto\BankaDto.cs" />
     <Compile Include="Dto\BankaHesapDto.cs" />
     <Compile Include="Dto\CariDto.cs" />
+    <Compile Include="Dto\EposBilgileriDto.cs" />
     <Compile Include="Dto\EvrakBilgileriDto.cs" />
     <Compile Include="Dto\HizmetDto.cs" />
     <Compile Include="Dto\IletisimBilgileriDto.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Entities\Cari.cs" />
     <Compile Include="Entities\DokumParametreleri.cs" />
     <Compile Include="Entities\Donem.cs" />
+    <Compile Include="Entities\EposBilgileri.cs" />
     <Compile Include="Entities\Evrak.cs" />
     <Compile Include="Entities\EvrakBilgileri.cs" />
     <Compile Include="Entities\Filtre.cs" />

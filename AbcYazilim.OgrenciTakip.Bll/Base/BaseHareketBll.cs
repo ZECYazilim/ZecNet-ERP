@@ -19,13 +19,13 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
             GeneralFunctions.CreateUnitOfWork<T, TContext>(ref _uow);
             return _uow.Rep.Select(filter, selector);
         }
-        public bool Insert(IList<BaseHareketEntity> entities)
+        public virtual bool Insert(IList<BaseHareketEntity> entities)
         {
             GeneralFunctions.CreateUnitOfWork<T, TContext>(ref _uow);
             _uow.Rep.Insert(entities.EntityListConvert<T>());
             return _uow.Save();
         }
-        public bool Update(IList<BaseHareketEntity> entitites)
+        public virtual bool Update(IList<BaseHareketEntity> entitites)
         {
             GeneralFunctions.CreateUnitOfWork<T, TContext>(ref _uow);
             _uow.Rep.Update(entitites.EntityListConvert<T>());

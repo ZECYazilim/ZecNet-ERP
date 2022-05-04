@@ -26,6 +26,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
         private BaseTablo _evrakBilgileriTable;
         private BaseTablo _promosyonBilgileriTable;
         private BaseTablo _iletisimBilgileriTable;
+        private BaseTablo _eposBilgileriTable;
         public TahakkukEditForm()
         {
             InitializeComponent();
@@ -81,6 +82,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 _promosyonBilgileriTable.Yukle();
             else if (_iletisimBilgileriTable != null)
                 _iletisimBilgileriTable.Yukle();
+            else if (_eposBilgileriTable != null)
+                _eposBilgileriTable.Yukle();
         }
         protected override void NesneyiKontrollereBagla()
         {
@@ -184,6 +187,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 _iletisimBilgileriTable.Tablo.GridControl.Focus();
                 return true;
             }
+            if (_eposBilgileriTable != null && _eposBilgileriTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageEposBilgileri;
+                _eposBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
             //devamı gelecek
 
             return false;
@@ -227,6 +236,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (_evrakBilgileriTable != null && _evrakBilgileriTable.TableValueChanged) return true;
                 if (_promosyonBilgileriTable != null && _promosyonBilgileriTable.TableValueChanged) return true;
                 if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
+                if (_eposBilgileriTable != null && _eposBilgileriTable.TableValueChanged) return true;
                 return false;
             }
 
@@ -243,6 +253,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (_evrakBilgileriTable != null && !_evrakBilgileriTable.Kaydet()) return false;
             if (_promosyonBilgileriTable != null && !_promosyonBilgileriTable.Kaydet()) return false;
             if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
+            if (_eposBilgileriTable != null && !_eposBilgileriTable.Kaydet()) return false;
             
             return true;
         }
@@ -300,6 +311,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                     _iletisimBilgileriTable.Yukle();
                 }
                 _iletisimBilgileriTable.Tablo.GridControl.Focus();
+            }
+            else if (e.Page == pageEposBilgileri)
+            {
+                if (pageEposBilgileri.Controls.Count == 0)
+                {
+                    _eposBilgileriTable = new EposBilgileriTable().AddTable(this);
+                    pageEposBilgileri.Controls.Add(_eposBilgileriTable);
+                    _eposBilgileriTable.Yukle();
+                }
+                _eposBilgileriTable.Tablo.GridControl.Focus();
             }
         }
     }
