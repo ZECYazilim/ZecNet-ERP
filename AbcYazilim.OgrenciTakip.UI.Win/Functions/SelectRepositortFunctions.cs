@@ -2,6 +2,8 @@
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraEditors;
@@ -117,6 +119,30 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         {
                             _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
                             _tablo.SetFocusedRowCellValue(_nameColumn, entity.BankaAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+                case "repositoryIptalNedeni":
+                    {
+                        var id = _tablo.GetRowCellId(_idColumn);//.GetRowCellValue(_tablo.FocusedRowHandle, _idColumn);
+                        var entity = (IptalNedeni)ShowListForms<IptalNedeniListForm>.ShowDialogListForm(kartTuru: KartTuru.IptalNedeni, id);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.IptalNedeniAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+                case "repositoryGittigiOkul":
+                    {
+                        var id = _tablo.GetRowCellId(_idColumn);//.GetRowCellValue(_tablo.FocusedRowHandle, _idColumn);
+                        var entity = (OkulL)ShowListForms<OkulListForm>.ShowDialogListForm(kartTuru: KartTuru.Okul, id);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.OkulAdi);
                             _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
                         }
                     }

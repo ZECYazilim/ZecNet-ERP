@@ -35,6 +35,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.btnHareketEkle = new DevExpress.XtraBars.BarButtonItem();
             this.btnHareketSil = new DevExpress.XtraBars.BarButtonItem();
             this.btnKartDuzenle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIptalEt = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIptalGeriAl = new DevExpress.XtraBars.BarButtonItem();
             this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -58,7 +60,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.sagMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketEkle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketSil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnKartDuzenle)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnKartDuzenle),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnIptalEt),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnIptalGeriAl)});
             this.sagMenu.Manager = this.barManager;
             this.sagMenu.Name = "sagMenu";
             // 
@@ -87,6 +91,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.btnKartDuzenle.Name = "btnKartDuzenle";
             this.btnKartDuzenle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnIptalEt
+            // 
+            this.btnIptalEt.Caption = "İptal Et";
+            this.btnIptalEt.Id = 4;
+            this.btnIptalEt.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.removeitem_16x16;
+            this.btnIptalEt.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.removeitem_32x32;
+            this.btnIptalEt.Name = "btnIptalEt";
+            this.btnIptalEt.ShortcutKeyDisplayString = "Ctrl + T";
+            this.btnIptalEt.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnIptalGeriAl
+            // 
+            this.btnIptalGeriAl.Caption = "İptal Geri Al";
+            this.btnIptalGeriAl.Id = 5;
+            this.btnIptalGeriAl.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.historyitem_16x16;
+            this.btnIptalGeriAl.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.historyitem_32x32;
+            this.btnIptalGeriAl.Name = "btnIptalGeriAl";
+            this.btnIptalGeriAl.ShortcutKeyDisplayString = "Ctrl + R";
+            this.btnIptalGeriAl.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // barManager
             // 
             this.barManager.DockControls.Add(this.barDockControlTop);
@@ -98,8 +122,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.btnHareketEkle,
             this.btnHareketSil,
             this.btnKartDuzenle,
-            this.barButtonItem2});
-            this.barManager.MaxItemId = 4;
+            this.barButtonItem2,
+            this.btnIptalEt,
+            this.btnIptalGeriAl});
+            this.barManager.MaxItemId = 6;
             // 
             // barDockControlTop
             // 
@@ -165,9 +191,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.BarButtonItem btnHareketSil;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         protected DevExpress.XtraBars.BarButtonItem btnKartDuzenle;
         protected Navigators.InsUptNavigator insUptNavigator;
+        protected DevExpress.XtraBars.BarButtonItem btnIptalEt;
+        protected DevExpress.XtraBars.BarButtonItem btnIptalGeriAl;
+        protected DevExpress.XtraBars.BarButtonItem btnHareketSil;
     }
 }

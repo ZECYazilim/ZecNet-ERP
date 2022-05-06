@@ -637,6 +637,12 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.Designer.cs">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.Designer.cs">
+      <DependentUpon>HizmetBilgileriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\IletisimBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -918,6 +924,9 @@
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.resx">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.resx">
+      <DependentUpon>HizmetBilgileriTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\IletisimBilgileriTable.resx">
       <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -1198,6 +1207,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\addfooter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historyitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historyitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeewelcome_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productshipments_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

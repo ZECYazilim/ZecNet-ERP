@@ -47,6 +47,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
         public static DateTime DonemBitisTarihi = new DateTime(2022, 06, 30);
         public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = true;
         public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
+        public static bool GunTarihininOncesineIptalTarihiGirilebilir = true;
+        public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
+        public static bool HizmetTahakkukKurusKullan;
         public AnaForm()
         {
             InitializeComponent();

@@ -58,6 +58,7 @@
     <Compile Include="Dto\CariDto.cs" />
     <Compile Include="Dto\EposBilgileriDto.cs" />
     <Compile Include="Dto\EvrakBilgileriDto.cs" />
+    <Compile Include="Dto\HizmetBilgileriDto.cs" />
     <Compile Include="Dto\HizmetDto.cs" />
     <Compile Include="Dto\IletisimBilgileriDto.cs" />
     <Compile Include="Dto\IletisimDto.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Entities\Filtre.cs" />
     <Compile Include="Entities\Gorev.cs" />
     <Compile Include="Entities\Hizmet.cs" />
+    <Compile Include="Entities\HizmetBilgileri.cs" />
     <Compile Include="Entities\HizmetTuru.cs" />
     <Compile Include="Entities\Il.cs" />
     <Compile Include="Entities\Ilce.cs" />

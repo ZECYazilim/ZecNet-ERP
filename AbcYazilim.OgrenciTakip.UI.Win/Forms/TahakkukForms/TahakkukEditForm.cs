@@ -87,6 +87,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 _eposBilgileriTable.Yukle();
             else if (_bilgiNotlariTable != null)
                 _bilgiNotlariTable.Yukle();
+
+            hizmetBilgileriTable.OwnerForm = this;
+            hizmetBilgileriTable.Yukle();
         }
         protected override void NesneyiKontrollereBagla()
         {
@@ -201,6 +204,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 tabUst.SelectedPage = pageNotlar;
                 _bilgiNotlariTable.Tablo.GridControl.Focus();
                 return true;
+            } 
+            if (hizmetBilgileriTable.HataliGiris())
+            {
+                tabAlt.SelectedPage = pageHizmetBilgileri;
+                hizmetBilgileriTable.Tablo.GridControl.Focus();
+                return true;
             }
             //devamı gelecek
 
@@ -247,6 +256,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
                 if (_eposBilgileriTable != null && _eposBilgileriTable.TableValueChanged) return true;
                 if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
+                if (hizmetBilgileriTable.TableValueChanged) return true;
                 return false;
             }
 
@@ -265,12 +275,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
             if (_eposBilgileriTable != null && !_eposBilgileriTable.Kaydet()) return false;
             if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
+            if (!hizmetBilgileriTable.Kaydet()) return false;
             
             return true;
         }
         protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
         {
-            if(e.Page==pageGenelBilgiler)
+            if (e.Page == pageGenelBilgiler)
             {
                 txtOkulNo.Focus();
                 txtOkulNo.SelectAll();
@@ -332,7 +343,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                     _eposBilgileriTable.Yukle();
                 }
                 _eposBilgileriTable.Tablo.GridControl.Focus();
-            } 
+            }
             else if (e.Page == pageNotlar)
             {
                 if (pageNotlar.Controls.Count == 0)
@@ -343,6 +354,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 }
                 _bilgiNotlariTable.Tablo.GridControl.Focus();
             }
+            else if (e.Page == pageHizmetBilgileri)
+                hizmetBilgileriTable.Tablo.GridControl.Focus();
         }
     }
 }
