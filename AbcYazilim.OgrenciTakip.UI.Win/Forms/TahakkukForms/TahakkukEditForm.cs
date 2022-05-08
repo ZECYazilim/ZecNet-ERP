@@ -90,6 +90,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             hizmetBilgileriTable.OwnerForm = this;
             hizmetBilgileriTable.Yukle();
+
+            indirimBilgileriTable.OwnerForm = this;
+            indirimBilgileriTable.Yukle();
         }
         protected override void NesneyiKontrollereBagla()
         {
@@ -257,6 +260,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (_eposBilgileriTable != null && _eposBilgileriTable.TableValueChanged) return true;
                 if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
                 if (hizmetBilgileriTable.TableValueChanged) return true;
+                if (indirimBilgileriTable.TableValueChanged) return true;
                 return false;
             }
 
@@ -276,6 +280,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (_eposBilgileriTable != null && !_eposBilgileriTable.Kaydet()) return false;
             if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
             if (!hizmetBilgileriTable.Kaydet()) return false;
+            if (!indirimBilgileriTable.Kaydet()) return false;
             
             return true;
         }
@@ -355,7 +360,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
                 _bilgiNotlariTable.Tablo.GridControl.Focus();
             }
             else if (e.Page == pageHizmetBilgileri)
-                hizmetBilgileriTable.Tablo.GridControl.Focus();
+                hizmetBilgileriTable.Tablo.GridControl.Focus(); 
+            else if (e.Page == pageIndirimBilgileri)
+                indirimBilgileriTable.Tablo.GridControl.Focus();
         }
     }
 }

@@ -129,6 +129,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.indirimBilgileriTable = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimPopupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -136,6 +137,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             ((System.ComponentModel.ISupportInitialize)(this.tabAlt)).BeginInit();
             this.tabAlt.SuspendLayout();
             this.pageHizmetBilgileri.SuspendLayout();
+            this.pageIndirimBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabUst)).BeginInit();
             this.tabUst.SuspendLayout();
             this.pageGenelBilgiler.SuspendLayout();
@@ -279,6 +281,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             // pageIndirimBilgileri
             // 
             this.pageIndirimBilgileri.Caption = "İndirim Bilgileri";
+            this.pageIndirimBilgileri.Controls.Add(this.indirimBilgileriTable);
             this.pageIndirimBilgileri.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.sales_16x16;
             this.pageIndirimBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             this.pageIndirimBilgileri.Name = "pageIndirimBilgileri";
@@ -1426,6 +1429,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // indirimBilgileriTable
+            // 
+            this.indirimBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.indirimBilgileriTable.Location = new System.Drawing.Point(0, 0);
+            this.indirimBilgileriTable.Name = "indirimBilgileriTable";
+            this.indirimBilgileriTable.Size = new System.Drawing.Size(764, 228);
+            this.indirimBilgileriTable.TabIndex = 0;
+            // 
             // TahakkukEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1444,6 +1455,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             ((System.ComponentModel.ISupportInitialize)(this.tabAlt)).EndInit();
             this.tabAlt.ResumeLayout(false);
             this.pageHizmetBilgileri.ResumeLayout(false);
+            this.pageIndirimBilgileri.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabUst)).EndInit();
             this.tabUst.ResumeLayout(false);
             this.pageGenelBilgiler.ResumeLayout(false);
@@ -1588,6 +1600,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlAileSinavBilgileri;
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlEvrakPromosyonBilgileri;
-        private UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
+        protected internal UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
+        protected internal UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable indirimBilgileriTable;
     }
 }

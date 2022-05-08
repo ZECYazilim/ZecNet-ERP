@@ -62,6 +62,7 @@
     <Compile Include="Dto\HizmetDto.cs" />
     <Compile Include="Dto\IletisimBilgileriDto.cs" />
     <Compile Include="Dto\IletisimDto.cs" />
+    <Compile Include="Dto\IndirimBilgileriDto.cs" />
     <Compile Include="Dto\IndirimDto.cs" />
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
     <Compile Include="Dto\KardesBilgileriDto.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Entities\Iletisim.cs" />
     <Compile Include="Entities\IletisimBilgileri.cs" />
     <Compile Include="Entities\Indirim.cs" />
+    <Compile Include="Entities\IndirimBilgileri.cs" />
     <Compile Include="Entities\IndiriminUygulanacagiHizmetBilgileri.cs" />
     <Compile Include="Entities\IndirimTuruu.cs" />
     <Compile Include="Entities\IptalNedeni.cs" />

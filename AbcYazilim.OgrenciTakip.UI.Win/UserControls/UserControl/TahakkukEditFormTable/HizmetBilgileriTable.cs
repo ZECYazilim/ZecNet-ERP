@@ -5,10 +5,12 @@ using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.HizmetForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.ServisForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.GeneralForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
 using System;
@@ -129,7 +131,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
         {
             base.Tablo_MouseUp(sender, e);
 
-            var entity = tablo.GetRow<HizmetBilgileriL>();
+            var entity = (HizmetBilgileriL)tablo.GetRow(tablo.FocusedRowHandle);
             if (entity == null) return;
 
             btnHareketSil.Enabled = !entity.IptalEdildi;
@@ -151,6 +153,43 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
 
                 repositoryIptalTarihi.MinValue = AnaForm.GunTarihininOncesineIptalTarihiGirilebilir ? entity.BaslamaTarihi : DateTime.Now.Date;
                 repositoryIptalTarihi.MaxValue = AnaForm.GunTarihininSonrasinaIptalTarihiGirilebilir ? AnaForm.DonemBitisTarihi.AddDays(-1) : DateTime.Now.Date;
+            }
+        }
+        protected override void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            base.Tablo_CellValueChanged(sender, e);
+
+            var entity = tablo.GetRow<HizmetBilgileriL>();
+
+            if (e.Column == ColIptalNedeniAdi)
+            {
+                ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource
+                    .Cast<IndirimBilgileriL>()
+                    .Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id)
+                    .ForEach(x => x.IptalNedeniId = entity.IptalNedeniId);
+
+                ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource
+                    .Cast<IndirimBilgileriL>()
+                    .Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id)
+                    .ForEach(x => x.IptalNedeniAdi = entity.IptalNedeniAdi);
+            }
+            else if (e.Column == colIptalAciklama)
+            {
+                ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource
+                    .Cast<IndirimBilgileriL>()
+                    .Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id)
+                    .ForEach(x => x.IptalAciklama = entity.IptalAciklama);
+            }
+            else if (e.Column == colIptalTarihi)
+            {
+                UcretHesapla(entity);
+
+                ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource
+                    .Cast<IndirimBilgileriL>()
+                    .Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id)
+                    .ForEach(x => x.IptalTarihi = entity.IptalTarihi);
+
+                ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIndirimHesapla();
             }
         }
     }

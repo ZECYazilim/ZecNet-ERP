@@ -57,5 +57,9 @@ namespace AbcYazilim.OgrenciTakip.Common.Message
         {
             UyariMesaji($"{tabloAdi}nda Eksik Bilgi Girişi Var. Lütfen Kontrol Ediniz.");
         }
+        public static void IptalHareketSilinemezMesaji()
+        {
+            HataMesaji("İptal Edilen Hareketler Silinemez.");
+        }
     }
 }

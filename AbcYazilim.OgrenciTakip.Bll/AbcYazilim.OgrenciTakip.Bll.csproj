@@ -77,6 +77,7 @@
     <Compile Include="General\IlceBll.cs" />
     <Compile Include="General\IletisimBilgileriBll.cs" />
     <Compile Include="General\IletisimBll.cs" />
+    <Compile Include="General\IndirimBilgileriBll.cs" />
     <Compile Include="General\IndirimBll.cs" />
     <Compile Include="General\IndiriminUygulanacagiHizmetBilgileriBll.cs" />
     <Compile Include="General\IndirimTuruBll.cs" />
