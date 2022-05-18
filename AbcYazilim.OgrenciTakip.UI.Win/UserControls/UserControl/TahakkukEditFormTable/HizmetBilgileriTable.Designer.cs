@@ -29,6 +29,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.grid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colHizmetId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -122,6 +124,20 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colGittigiOkulId,
             this.colGittigiOkulAdi,
             this.colIptalAciklama});
+            gridFormatRule1.ApplyToRow = true;
+            gridFormatRule1.Column = this.colIptalEdildi;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.MistyRose;
+            formatConditionRuleValue1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Italic;
+            formatConditionRuleValue1.Appearance.ForeColor = System.Drawing.Color.Red;
+            formatConditionRuleValue1.Appearance.Options.HighPriority = true;
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Appearance.Options.UseFont = true;
+            formatConditionRuleValue1.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue1.Value1 = true;
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            this.tablo.FormatRules.Add(gridFormatRule1);
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsCustomization.AllowColumnMoving = false;
@@ -140,9 +156,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisaYol = null;
-            this.tablo.StatusBarKisaYolAciklama = null;
+            this.tablo.StatusBarAciklama = "Öğrenciye Verilen Hizmetleri Seçiniz.";
+            this.tablo.StatusBarKisaYol = "Shift+Insert";
+            this.tablo.StatusBarKisaYolAciklama = "Seçim Yap";
             this.tablo.ViewCaption = "Hizmet Bilgileri";
             // 
             // colHizmetId
@@ -423,9 +439,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colIptalTarihi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalTarihi.OptionsFilter.AllowAutoFilter = false;
             this.colIptalTarihi.OptionsFilter.AllowFilter = false;
-            this.colIptalTarihi.StatusBarAciklama = null;
-            this.colIptalTarihi.StatusBarKisaYol = null;
-            this.colIptalTarihi.StatusBarKisaYolAciklama = null;
+            this.colIptalTarihi.StatusBarAciklama = "Tarih Seçiniz.";
+            this.colIptalTarihi.StatusBarKisaYol = "F4 :";
+            this.colIptalTarihi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colIptalTarihi.Visible = true;
             this.colIptalTarihi.VisibleIndex = 9;
             this.colIptalTarihi.Width = 130;
@@ -463,9 +479,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.ColIptalNedeniAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.ColIptalNedeniAdi.OptionsFilter.AllowAutoFilter = false;
             this.ColIptalNedeniAdi.OptionsFilter.AllowFilter = false;
-            this.ColIptalNedeniAdi.StatusBarAciklama = null;
-            this.ColIptalNedeniAdi.StatusBarKisaYol = null;
-            this.ColIptalNedeniAdi.StatusBarKisaYolAciklama = null;
+            this.ColIptalNedeniAdi.StatusBarAciklama = "İptal Nedeni Seçiniz.";
+            this.ColIptalNedeniAdi.StatusBarKisaYol = "F4 :";
+            this.ColIptalNedeniAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.ColIptalNedeniAdi.Visible = true;
             this.ColIptalNedeniAdi.VisibleIndex = 10;
             this.ColIptalNedeniAdi.Width = 140;
@@ -501,9 +517,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colGittigiOkulAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colGittigiOkulAdi.OptionsFilter.AllowAutoFilter = false;
             this.colGittigiOkulAdi.OptionsFilter.AllowFilter = false;
-            this.colGittigiOkulAdi.StatusBarAciklama = null;
-            this.colGittigiOkulAdi.StatusBarKisaYol = null;
-            this.colGittigiOkulAdi.StatusBarKisaYolAciklama = null;
+            this.colGittigiOkulAdi.StatusBarAciklama = "Okul Seçiniz.";
+            this.colGittigiOkulAdi.StatusBarKisaYol = "F4 :";
+            this.colGittigiOkulAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colGittigiOkulAdi.Visible = true;
             this.colGittigiOkulAdi.VisibleIndex = 11;
             this.colGittigiOkulAdi.Width = 200;
@@ -527,7 +543,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colIptalAciklama.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalAciklama.OptionsFilter.AllowAutoFilter = false;
             this.colIptalAciklama.OptionsFilter.AllowFilter = false;
-            this.colIptalAciklama.StatusBarAciklama = null;
+            this.colIptalAciklama.StatusBarAciklama = "İptal Açıklaması Giriniz.";
             this.colIptalAciklama.StatusBarKisaYol = null;
             this.colIptalAciklama.StatusBarKisaYolAciklama = null;
             this.colIptalAciklama.Visible = true;

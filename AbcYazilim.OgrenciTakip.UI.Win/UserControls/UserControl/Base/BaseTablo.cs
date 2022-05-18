@@ -113,6 +113,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
         protected virtual void OpenEntity() { }
         protected virtual void SutunGizleGoster() { }
         protected virtual void RowCellAllowEdit() { }
+        protected virtual void IptalEt() { }
+        protected virtual void IptalGeriAl()
+        {
+
+        }
         protected internal bool Kaydet()
         {
             insUptNavigator.Navigator.Buttons.DoClick(insUptNavigator.Navigator.Buttons.EndEdit);
@@ -153,6 +158,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 HareketSil();
             else if (e.Item == btnKartDuzenle)
                 OpenEntity();
+            else if (e.Item == btnIptalEt)
+                IptalEt();
+            else if (e.Item == btnIptalGeriAl)
+                IptalGeriAl();
             Cursor.Current = DefaultCursor;
         }
         protected virtual void ImageComboBox_SelectedValueChanged(object sender, EventArgs e){}
@@ -227,6 +236,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                     break;
                 case Keys.F3:
                     OpenEntity();
+                    break;
+                case Keys.T when e.Control:
+                    IptalEt();
+                    break;
+                case Keys.R when e.Control:
+                    IptalGeriAl();
                     break;
             }
         }

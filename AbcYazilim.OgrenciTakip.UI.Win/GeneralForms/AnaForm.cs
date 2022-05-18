@@ -51,6 +51,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
         public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
         public static bool HizmetTahakkukKurusKullan;
         public static bool IndirimTahakkukKurusKullan;
+        public static bool GittigiOkulZorunlu = true;
         public AnaForm()
         {
             InitializeComponent();

@@ -61,5 +61,14 @@ namespace AbcYazilim.OgrenciTakip.Common.Message
         {
             HataMesaji("İptal Edilen Hareketler Silinemez.");
         }
+        public static DialogResult IptalMesaj(string kartAdi)
+        {
+             return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} İptal Edilecektir. Onaylıyor Musunuz?", "İptal Onayı");
+        }
+        public static DialogResult IptalGeriAlMesaj(string kartAdi)
+        {
+            return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} Kartına Uygulanan İptal İşlemi Geri Alınacaktır. Onaylıyor Musunuz?", "İptal Gerial Onayı");
+        }
+
     }
 }

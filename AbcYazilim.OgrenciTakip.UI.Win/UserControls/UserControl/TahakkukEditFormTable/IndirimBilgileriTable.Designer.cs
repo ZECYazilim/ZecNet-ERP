@@ -29,6 +29,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.grid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colIndirimAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -45,6 +47,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colIptalNedeniAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryIptalNedeni = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colIptalAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colIptalEdildi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
@@ -93,12 +96,29 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colHizmetAdi,
             this.colIslemTarihi,
             this.colIptalTarihi,
+            this.colIptalEdildi,
             this.colBrutIndirim,
             this.colKistDonemDusulenIndirim,
             this.colNetIndirim,
             this.colIptalNedeniId,
             this.colIptalNedeniAdi,
             this.colIptalAciklama});
+            gridFormatRule1.ApplyToRow = true;
+            gridFormatRule1.Column = this.colIptalEdildi;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.MistyRose;
+            formatConditionRuleValue1.Appearance.BorderColor = System.Drawing.Color.White;
+            formatConditionRuleValue1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Italic;
+            formatConditionRuleValue1.Appearance.ForeColor = System.Drawing.Color.Red;
+            formatConditionRuleValue1.Appearance.Options.HighPriority = true;
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Appearance.Options.UseBorderColor = true;
+            formatConditionRuleValue1.Appearance.Options.UseFont = true;
+            formatConditionRuleValue1.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue1.Value1 = true;
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            this.tablo.FormatRules.Add(gridFormatRule1);
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -115,9 +135,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisaYol = null;
-            this.tablo.StatusBarKisaYolAciklama = null;
+            this.tablo.StatusBarAciklama = "Öğrenciye Uygulanan İndirimleri Seçiniz.";
+            this.tablo.StatusBarKisaYol = "(Shift+Insert)";
+            this.tablo.StatusBarKisaYolAciklama = "Seçim Yap";
             this.tablo.ViewCaption = "İndirim Bilgileri";
             // 
             // colIndirimAdi
@@ -193,9 +213,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colIptalTarihi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalTarihi.OptionsFilter.AllowAutoFilter = false;
             this.colIptalTarihi.OptionsFilter.AllowFilter = false;
-            this.colIptalTarihi.StatusBarAciklama = null;
-            this.colIptalTarihi.StatusBarKisaYol = null;
-            this.colIptalTarihi.StatusBarKisaYolAciklama = null;
+            this.colIptalTarihi.StatusBarAciklama = "Tarih Seçiniz.";
+            this.colIptalTarihi.StatusBarKisaYol = "F4 :";
+            this.colIptalTarihi.StatusBarKisaYolAciklama = "Seçim Yap.";
             this.colIptalTarihi.Visible = true;
             this.colIptalTarihi.VisibleIndex = 6;
             this.colIptalTarihi.Width = 100;
@@ -220,9 +240,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colBrutIndirim.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colBrutIndirim.OptionsFilter.AllowAutoFilter = false;
             this.colBrutIndirim.OptionsFilter.AllowFilter = false;
-            this.colBrutIndirim.StatusBarAciklama = null;
-            this.colBrutIndirim.StatusBarKisaYol = null;
-            this.colBrutIndirim.StatusBarKisaYolAciklama = null;
+            this.colBrutIndirim.StatusBarAciklama = "Tutar Giriniz.";
+            this.colBrutIndirim.StatusBarKisaYol = "F4 :";
+            this.colBrutIndirim.StatusBarKisaYolAciklama = "Hesap Makinesi";
             this.colBrutIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutIndirim", "{0:n2}")});
             this.colBrutIndirim.Visible = true;
@@ -251,9 +271,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colKistDonemDusulenIndirim.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colKistDonemDusulenIndirim.OptionsFilter.AllowAutoFilter = false;
             this.colKistDonemDusulenIndirim.OptionsFilter.AllowFilter = false;
-            this.colKistDonemDusulenIndirim.StatusBarAciklama = null;
-            this.colKistDonemDusulenIndirim.StatusBarKisaYol = null;
-            this.colKistDonemDusulenIndirim.StatusBarKisaYolAciklama = null;
+            this.colKistDonemDusulenIndirim.StatusBarAciklama = "Tutar Giriniz.";
+            this.colKistDonemDusulenIndirim.StatusBarKisaYol = "F4 :";
+            this.colKistDonemDusulenIndirim.StatusBarKisaYolAciklama = "Hesap Makinesi";
             this.colKistDonemDusulenIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenIndirim", "{0:n2}")});
             this.colKistDonemDusulenIndirim.Visible = true;
@@ -303,9 +323,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colIptalNedeniAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalNedeniAdi.OptionsFilter.AllowAutoFilter = false;
             this.colIptalNedeniAdi.OptionsFilter.AllowFilter = false;
-            this.colIptalNedeniAdi.StatusBarAciklama = null;
-            this.colIptalNedeniAdi.StatusBarKisaYol = null;
-            this.colIptalNedeniAdi.StatusBarKisaYolAciklama = null;
+            this.colIptalNedeniAdi.StatusBarAciklama = "İptal Nedeni Seçiniz.";
+            this.colIptalNedeniAdi.StatusBarKisaYol = "F4 :";
+            this.colIptalNedeniAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colIptalNedeniAdi.Visible = true;
             this.colIptalNedeniAdi.VisibleIndex = 7;
             this.colIptalNedeniAdi.Width = 150;
@@ -326,12 +346,23 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colIptalAciklama.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalAciklama.OptionsFilter.AllowAutoFilter = false;
             this.colIptalAciklama.OptionsFilter.AllowFilter = false;
-            this.colIptalAciklama.StatusBarAciklama = null;
+            this.colIptalAciklama.StatusBarAciklama = "İptal Açıklaması Giriniz.";
             this.colIptalAciklama.StatusBarKisaYol = null;
             this.colIptalAciklama.StatusBarKisaYolAciklama = null;
             this.colIptalAciklama.Visible = true;
             this.colIptalAciklama.VisibleIndex = 8;
             this.colIptalAciklama.Width = 250;
+            // 
+            // colIptalEdildi
+            // 
+            this.colIptalEdildi.Caption = "IptalEdildi";
+            this.colIptalEdildi.FieldName = "IptalEdildi";
+            this.colIptalEdildi.Name = "colIptalEdildi";
+            this.colIptalEdildi.OptionsColumn.AllowEdit = false;
+            this.colIptalEdildi.OptionsColumn.ShowInCustomizationForm = false;
+            this.colIptalEdildi.StatusBarAciklama = null;
+            this.colIptalEdildi.StatusBarKisaYol = null;
+            this.colIptalEdildi.StatusBarKisaYolAciklama = null;
             // 
             // IndirimBilgileriTable
             // 
@@ -373,5 +404,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryIptalTarihi;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryIptalNedeni;
+        private Grid.MyGridColumn colIptalEdildi;
     }
 }
