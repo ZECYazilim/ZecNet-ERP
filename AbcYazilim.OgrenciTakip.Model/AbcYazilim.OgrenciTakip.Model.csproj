@@ -67,6 +67,7 @@
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
+    <Compile Include="Dto\OdemeBilgileriDto.cs" />
     <Compile Include="Dto\OgrenciDto.cs" />
     <Compile Include="Dto\OkulDto.cs" />
     <Compile Include="Dto\PromosyonBilgileriDto.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Entities\Kasa.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Meslek.cs" />
+    <Compile Include="Entities\OdemeBilgileri.cs" />
     <Compile Include="Entities\OdemeTuru.cs" />
     <Compile Include="Entities\Ogrenci.cs" />
     <Compile Include="Entities\Okul.cs" />
