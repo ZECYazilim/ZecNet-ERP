@@ -70,6 +70,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
             DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem5 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -90,6 +95,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.resimPopupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnTaksitOlustur = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimPopupMenu)).BeginInit();
             this.SuspendLayout();
@@ -115,9 +121,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnYazdir,
             this.btnBaskiOnizleme,
             this.btnResimEkle,
-            this.btnResimSil});
+            this.btnResimSil,
+            this.btnTaksitOlustur});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 15;
+            this.ribbonControl.MaxItemId = 16;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -372,6 +379,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnGeriAl);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSil);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnUygula);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnTaksitOlustur);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnBaskiOnizleme);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
@@ -399,6 +407,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.resimPopupMenu.ItemLinks.Add(this.btnResimSil);
             this.resimPopupMenu.Name = "resimPopupMenu";
             this.resimPopupMenu.Ribbon = this.ribbonControl;
+            // 
+            // btnTaksitOlustur
+            // 
+            this.btnTaksitOlustur.Caption = "Taksit Oluştur";
+            this.btnTaksitOlustur.Id = 15;
+            this.btnTaksitOlustur.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
+            this.btnTaksitOlustur.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
+            this.btnTaksitOlustur.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
+            this.btnTaksitOlustur.Name = "btnTaksitOlustur";
+            toolTipTitleItem9.ImageOptions.ImageUri.Uri = "business%20objects/bo_opportunity";
+            toolTipTitleItem9.Text = "( F2 )\r\n";
+            toolTipItem20.Text = "Taksit Oluştur\r\n";
+            toolTipItem21.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem21.Text = "<b>Girdiğiniz Kriterlere Göre Taksit (ler) Oluşturulur. </b>";
+            superToolTip10.Items.Add(toolTipTitleItem9);
+            superToolTip10.Items.Add(toolTipItem20);
+            superToolTip10.Items.Add(toolTipSeparatorItem5);
+            superToolTip10.Items.Add(toolTipItem21);
+            this.btnTaksitOlustur.SuperTip = superToolTip10;
+            this.btnTaksitOlustur.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // BaseEditForm
             // 
@@ -440,5 +468,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal DevExpress.XtraBars.BarStaticItem statusBarAciklama;
         protected internal DevExpress.XtraBars.BarStaticItem statusBarKisaYol;
         protected internal DevExpress.XtraBars.BarStaticItem statusBarKisaYolAciklama;
+        protected DevExpress.XtraBars.BarButtonItem btnTaksitOlustur;
     }
 }

@@ -52,6 +52,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
         public static bool HizmetTahakkukKurusKullan;
         public static bool IndirimTahakkukKurusKullan;
         public static bool GittigiOkulZorunlu = true;
+        public static DateTime MaksimumTaksitTarihi = new DateTime(2022, 06, 30);
+        public static byte MaksimumTaksitSayisi= 12;
         public AnaForm()
         {
             InitializeComponent();

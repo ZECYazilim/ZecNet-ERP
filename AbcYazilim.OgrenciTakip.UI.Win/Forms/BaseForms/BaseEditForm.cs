@@ -179,7 +179,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             if (_formSablonKayitEdilecek)
                 Name.FormSablonKaydet(Left, Top, Width, Height, WindowState);
         }
-        protected virtual void FiltreUygula() { }        
+        protected virtual void FiltreUygula() { }
+        protected virtual void TaksitOlustur(){ }
         protected virtual void BaskiOnizleme() { }
         protected virtual void Yazdir() { }     
         protected virtual void SecimYap(object sender) { }              
@@ -332,6 +333,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             }
             else if (e.Item == btnUygula)
                 FiltreUygula();
+            else if (e.Item == btnTaksitOlustur)
+                TaksitOlustur();
 
             else if (e.Item == btnYazdir)
                 Yazdir();

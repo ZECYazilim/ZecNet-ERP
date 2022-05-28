@@ -69,6 +69,10 @@ namespace AbcYazilim.OgrenciTakip.Common.Message
         {
             return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} Kartına Uygulanan İptal İşlemi Geri Alınacaktır. Onaylıyor Musunuz?", "İptal Gerial Onayı");
         }
+        public static void SecimHataMesaji(string alanAdi)
+        {
+            HataMesaji($"{alanAdi} Seçimi Yapmalısınız");
+        }
 
     }
 }
