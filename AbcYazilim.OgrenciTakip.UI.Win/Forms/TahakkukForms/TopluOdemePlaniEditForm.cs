@@ -1,33 +1,40 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Common.Message;
+using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.GeneralForms;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
 using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections;
+using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
 {
     public partial class TopluOdemePlaniEditForm : BaseEditForm
     {
+        #region Variables
         private OdemeTipi _odemeTipi;
+        private byte _blokeGunSayisi;
+
         private readonly IList _source;
         private readonly long _tahakkukId;
         private readonly decimal _bakiye;
         private readonly DateTime _kayitTarihi;
         private readonly int _dahaOnceGirilenTaksitSayisi;
-        private bool _maksimumTaksitSayisinaUlasildi;
-        public TopluOdemePlaniEditForm(IList source,long tahakkukId,decimal bakiye,DateTime kayitTarihi,int dahaOnceGirilenTaksitSayisi,bool maksimumTaksitSayisinaUlasildi)
+        #endregion
+        public TopluOdemePlaniEditForm(params object[] prm)//(IList source,long tahakkukId,decimal bakiye,DateTime kayitTarihi,int dahaOnceGirilenTaksitSayisi,bool maksimumTaksitSayisinaUlasildi)
         {
             InitializeComponent();
 
-            _source = source;
-            _tahakkukId = tahakkukId;
-            _bakiye = bakiye;
-            _kayitTarihi = kayitTarihi;
-            _dahaOnceGirilenTaksitSayisi = dahaOnceGirilenTaksitSayisi;
-            _maksimumTaksitSayisinaUlasildi = maksimumTaksitSayisinaUlasildi;
+            _source = (IList)prm[0];
+            _tahakkukId = (long)prm[1];
+            _bakiye = (decimal)prm[2];
+            _kayitTarihi = (DateTime)prm[3];
+            _dahaOnceGirilenTaksitSayisi = (int)prm[4];
 
             DataLayoutControl = myDataLayoutControl;
             EventsLoad();
@@ -44,9 +51,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             txtBakiye.Value = _bakiye;
             txtTaksitSayisi.Properties.MinValue = 1;
             txtTaksitSayisi.Properties.MaxValue = AnaForm.MaksimumTaksitSayisi-_dahaOnceGirilenTaksitSayisi;
-            if (AnaForm.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi > 0) return;
-            Messages.HataMesaji("Maksimum Taksit Sayısı Aşılıyor.");
-            _maksimumTaksitSayisinaUlasildi = true;
+            if (AnaForm.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi > 0)
+                ShowDialog();
+            else
+                Messages.HataMesaji("Maksimum Taksit Sayısı Aşılıyor.");
         }
         private void ControlEnableChange(OdemeTipi odemeTipi)
         {
@@ -62,7 +70,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
 
         private bool HataliGiris()
         {
-            if (txtIlkTaksitTarihi.DateTime.Date.AddMonths((int)txtTaksitSayisi.Value) > AnaForm.MaksimumTaksitTarihi)
+            if (txtIlkTaksitTarihi.DateTime.Date.AddMonths((int)txtTaksitSayisi.Value-1) > AnaForm.MaksimumTaksitTarihi)
             {
                 Messages.HataMesaji("Maximum Taksit Tarihi Aşılıyor.");
                 return true;
@@ -111,6 +119,112 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             }
             return false;
+        }
+        protected override void TaksitOlustur()
+        {
+            if (HataliGiris()) return;
+            txtOdemeTuru.Focus();
+
+            var tutar = txtSabitTaksit.Value != 0 ? txtSabitTaksit.Value : Math.Round(txtBakiye.Value / txtTaksitSayisi.Value, AnaForm.OdemePlaniKurusKullan ? 2 : 0);
+            decimal toplamGirilenTutar = 0;
+
+
+            for (int t = 0; t < txtTaksitSayisi.Value; t++)
+            {
+                var taksit = new OdemeBilgileriL
+                {
+                    Id = 0,
+                    TahakkukId = _tahakkukId,
+                    OdemeTipi = _odemeTipi,
+                    OdemeTuruId = (long)txtOdemeTuru.Id,
+                    OdemeTuruAdi = txtOdemeTuru.Text,
+                    GirisTarihi = DateTime.Now.Date,
+                    Vade = txtIlkTaksitTarihi.DateTime.Date.AddMonths(t),
+                    HesabaGecisTarihi = txtIlkTaksitTarihi.DateTime.Date.AddMonths(t),
+                    Tutar = t == txtTaksitSayisi.Value - 1 && txtSabitTaksit.Value == 0 ? txtBakiye.Value - toplamGirilenTutar : tutar,
+                    BelgeDurumu = BelgeDurumu.Portfoyde,
+                    Insert = true
+                };
+                taksit.TutarYazi = taksit.Tutar.YaziIleTutar();
+                taksit.VadeYazi = taksit.Vade.YaziIleVade();
+                taksit.Kalan = taksit.Tutar;
+                toplamGirilenTutar += taksit.Tutar;
+
+                switch (_odemeTipi)
+                {
+                    case OdemeTipi.Epos:
+                    case OdemeTipi.Ots:
+                    case OdemeTipi.Pos:
+                        taksit.BankaHesapId = txtBankaHesap.Id;
+                        taksit.BankaHesapAdi = txtBankaHesap.Text;
+                        taksit.BlokeGunSayisi = _blokeGunSayisi;
+                        taksit.HesabaGecisTarihi = taksit.Vade.Date.AddDays(_blokeGunSayisi);
+                        break;
+                    case OdemeTipi.Senet:
+                        taksit.AsilBorclu = txtAsilBorclu.Text;
+                        taksit.Ciranta = txtCiranta.Text;                     
+                        break;
+                    case OdemeTipi.Cek:
+                        taksit.AsilBorclu = txtAsilBorclu.Text;
+                        taksit.Ciranta = txtCiranta.Text;
+                        taksit.BankaId = txtBanka.Id;
+                        taksit.BankaAdi = txtBanka.Text;
+                        taksit.BankaSubeId = txtBankaSube.Id;
+                        taksit.BankaSubeAdi = txtBankaSube.Text;
+                        taksit.HesapNo = txtHesapNo.Text;
+                        taksit.BelgeNo = ((int)txtIlkBelgeNo.Value+t).ToString();
+                        break;
+                }
+                _source.Add(taksit);
+            }
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+        protected override void SecimYap(object sender)
+        {
+            if (!(sender is ButtonEdit)) return;
+            using (var sec = new SelectFunctions())
+            {
+                if (sender == txtOdemeTuru)
+                    sec.Sec(txtOdemeTuru);
+
+                else if (sender == txtBankaHesap)
+                    sec.Sec(txtBankaHesap, _odemeTipi);
+                else if (sender == txtBanka)
+                    sec.Sec(txtBanka);
+                else if (sender == txtBankaSube)
+                    sec.Sec(txtBankaSube,txtBanka);
+            }             
+        }
+        protected override void Control_IdChanged(object sender, IdChangedEventArgs e)
+        {
+            if (sender == txtOdemeTuru)
+            {
+                _odemeTipi = txtOdemeTuru.Id == null ? OdemeTipi.Acik : txtOdemeTuru.Tag.ToString().GetEnum<OdemeTipi>();
+                ControlEnableChange(_odemeTipi);
+                txtBankaHesap.Id = null;
+                txtBankaHesap.Text = null;
+            }
+            else if (sender == txtBankaHesap)
+                _blokeGunSayisi = Convert.ToByte(txtBankaHesap.Tag);
+            else if (sender == txtBanka)
+            {
+                txtBankaSube.Id = null;
+                txtBankaSube.Text = null;
+            }
+        }
+        protected override void Control_EnabledChange(object sender, EventArgs e)
+        {
+            if (sender != txtBanka) return;
+            txtBanka.ControlEnabledChange(txtBankaSube);
+        }
+        protected override void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SablonKaydet();
+            if (DialogResult != DialogResult.Cancel) return;
+
+            if (Messages.HayirSeciliEvetHayir("Taksit Oluşturma Ekranı Kapatılacaktır. Onaylıyor Musunuz?", "Kapatma Onay") == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

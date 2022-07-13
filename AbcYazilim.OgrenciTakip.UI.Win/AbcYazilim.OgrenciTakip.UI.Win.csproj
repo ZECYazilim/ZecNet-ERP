@@ -314,6 +314,30 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MakbuzForms\BelgeHareketleriListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\BelgeHareketleriListForm.Designer.cs">
+      <DependentUpon>BelgeHareketleriListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\BelgeSecimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\BelgeSecimListForm.Designer.cs">
+      <DependentUpon>BelgeSecimListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzEditForm.Designer.cs">
+      <DependentUpon>MakbuzEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzListForm.Designer.cs">
+      <DependentUpon>MakbuzListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MeslekForms\MeslekEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -497,6 +521,7 @@
     <Compile Include="Functions\SelectRepositortFunctions.cs" />
     <Compile Include="Functions\SelectRowFunctions.cs" />
     <Compile Include="Functions\TablePrintingFunctions.cs" />
+    <Compile Include="Functions\YaziyaCevir.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -583,6 +608,12 @@
     <Compile Include="UserControls\Controls\MyToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\GenelEditFormTable\MakbuzHareketleriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GenelEditFormTable\MakbuzHareketleriTable.Designer.cs">
+      <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Grid\MyBandedGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -642,6 +673,12 @@
     </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.Designer.cs">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\GeriOdemeBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\GeriOdemeBilgileriTable.Designer.cs">
+      <DependentUpon>GeriOdemeBilgileriTable.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.cs">
       <SubType>UserControl</SubType>
@@ -811,6 +848,18 @@
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MakbuzForms\BelgeHareketleriListForm.resx">
+      <DependentUpon>BelgeHareketleriListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MakbuzForms\BelgeSecimListForm.resx">
+      <DependentUpon>BelgeSecimListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MakbuzForms\MakbuzEditForm.resx">
+      <DependentUpon>MakbuzEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MakbuzForms\MakbuzListForm.resx">
+      <DependentUpon>MakbuzListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MeslekForms\MeslekEditForm.resx">
       <DependentUpon>MeslekEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -918,6 +967,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\GenelEditFormTable\MakbuzHareketleriTable.resx">
+      <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Navigators\InsUptNavigator.resx">
       <DependentUpon>InsUptNavigator.cs</DependentUpon>
     </EmbeddedResource>
@@ -944,6 +996,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.resx">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\GeriOdemeBilgileriTable.resx">
+      <DependentUpon>GeriOdemeBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.resx">
       <DependentUpon>HizmetBilgileriTable.cs</DependentUpon>

@@ -194,3 +194,11 @@ C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Wi
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.BilgiNotlariTable.resources
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable.resources
 C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms.TopluOdemePlaniEditForm.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.OdemeBilgileriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.GeriOdemeBilgileriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms.MakbuzEditForm.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms.MakbuzListForm.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.UserControls.GenelEditFormTable.MakbuzHareketleriTable.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms.BelgeSecimListForm.resources
+C:\Users\Alpha 08-MA\Desktop\gyp22_first\ZecNetERP\AbcYazilim.OgrenciTakip.UI.Win\obj\Debug\AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms.BelgeHareketleriListForm.resources

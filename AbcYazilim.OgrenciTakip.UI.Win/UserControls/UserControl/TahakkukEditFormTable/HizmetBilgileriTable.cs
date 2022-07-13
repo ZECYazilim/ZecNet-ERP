@@ -40,7 +40,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
         {
             var source = tablo.DataController.ListSource;
             ListeDisiTutulacakKayitlar = source.Cast<HizmetBilgileriL>().Where(x => !x.IptalEdildi && !x.Delete).Select(x => x.HizmetId).ToList();
-            var entities = ShowListForms<HizmetListForm>.ShowDialogListForm(KartTuru.Hizmet, ListeDisiTutulacakKayitlar, true, false).EntityListConvert<HizmetL>();
+            var entities = ShowListForms<HizmetListForm>.ShowDialogListForm(KartTuru.Hizmet, ListeDisiTutulacakKayitlar, true, true).EntityListConvert<HizmetL>();
             if (entities == null) return;
             foreach (var entity in entities)
             {

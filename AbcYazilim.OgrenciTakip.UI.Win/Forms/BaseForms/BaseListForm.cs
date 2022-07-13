@@ -70,12 +70,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             Tablo.FilterEditorCreated += Tablo_FilterEditorCreated;
             Tablo.ColumnFilterChanged += Tablo_ColumnFilterChanged;
             Tablo.CustomDrawFooterCell += Tablo_CustomDrawFooterCell;
+            Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged;
+            Tablo.RowDeleted += Tablo_RowDeleted;
             //Form Events
             Shown += BaseListForm_Shown;
             Load += BaseListForm_Load;
             FormClosing += BaseListForm_FormClosing;
             LocationChanged += BaseListForm_LocationChanged;
             SizeChanged += BaseListForm_SizeChanged;
+        }
+        private void Tablo_RowDeleted(object sender, DevExpress.Data.RowDeletedEventArgs e)
+        {
+            SutunGizleGoster();
         }
         private void Tablo_ColumnFilterChanged(object sender, System.EventArgs e)
         {
@@ -87,6 +93,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             if (!Tablo.OptionsView.ShowFooter) return;
             if (e.Column.Summary.Count > 0)
                 e.Appearance.TextOptions.HAlignment = e.Column.ColumnEdit.Appearance.HAlignment;
+        }
+        private void Tablo_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            SutunGizleGoster();
         }
         private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
         {
@@ -140,7 +150,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         {
             Tablo.Focus();
             ButonGizleGoster();
-            //SutunGizleGoster();
+            SutunGizleGoster();
 
             if (IsMdiChild || !SeciliGelecekId.HasValue) return;
             Tablo.RowFocus("Id",SeciliGelecekId);
@@ -156,12 +166,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
             HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
         }
-
-        private void SutunGizleGoster()
-        {
-            throw new System.NotImplementedException();
-        }
-
+        protected virtual void SutunGizleGoster(){}
         private void SablonKaydet()
         {
             if (_formSablonKayitEdilecek)
@@ -195,7 +200,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             //Güncellenecek.
 
         }
-
+        protected virtual void BelgeHareketleri() { }
         protected virtual void DegiskenleriDoldur() { }
 
         protected virtual void ShowEditForm(long id)
@@ -281,7 +286,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             else
                 btnDuzelt.PerformClick();
         }
-        private void Button_ItemClick(object sender, ItemClickEventArgs e)
+        protected virtual void Button_ItemClick(object sender, ItemClickEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             if (e.Item == btnGonder)
@@ -333,7 +338,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
                 else
                     Tablo.HideCustomization();
             }
-            else if (e.Item==btnTahakkukYap)
+            else if (e.Item == btnBelgeHareketleri)
+                BelgeHareketleri();
+            else if (e.Item == btnTahakkukYap)
             {
                 TahakkukYap();
             }

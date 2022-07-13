@@ -53,6 +53,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             SizeChanged += BaseEditForm_SizeChanged;
             Load += BaseEditForm_Load;
             FormClosing += BaseEditForm_FormClosing;
+            Shown += BaseEditForm_Shown;
             void ControlEvents(Control control)
             {
                 control.KeyDown += Control_KeyDown;
@@ -94,12 +95,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
                     foreach (Control ctrl in layout.Controls)
                         ControlEvents(ctrl);
         }
-        private void EntityDelete()
-        {
-            if (!((IBaseCommonBll)Bll).Delete(OldEntity)) return;
-            RefreshControl = true;
-            Close();
-        }
+
         private void ButonGizleGoster()
         {
             ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
@@ -192,6 +188,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         {
             return ((IBaseGenelBll)Bll).Insert(CurrentEntity);
         }
+        protected virtual void EntityDelete()
+        {
+            if (!((IBaseCommonBll)Bll).Delete(OldEntity)) return;
+            RefreshControl = true;
+            Close();
+        }
         protected virtual void NesneyiKontrollereBagla() { }
         protected virtual void GuncelNesneOlustur() { }
         protected virtual void TabloYukle() { }
@@ -240,7 +242,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             _formSablonKayitEdilecek = true;
         }
 
-        private void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        protected virtual void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SablonKaydet();
 
@@ -248,7 +250,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             if (!Kaydet(true))
                 e.Cancel = true;
         }
-       
+        protected virtual void BaseEditForm_Shown(object sender, EventArgs e) { }
         protected virtual void Control_EnabledChange(object sender, EventArgs e)
         { }
 
@@ -268,7 +270,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             SecimYap(sender);
         }
 
-        private void Control_IdChanged(object sender, IdChangedEventArgs e)
+        protected virtual void Control_IdChanged(object sender, IdChangedEventArgs e)
         {
             if (!IsLoaded) return;
             GuncelNesneOlustur();

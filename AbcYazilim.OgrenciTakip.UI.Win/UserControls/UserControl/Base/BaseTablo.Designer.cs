@@ -119,7 +119,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             this.btnBelgeHareketleri.Id = 6;
             this.btnBelgeHareketleri.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.documentmap_16x16;
             this.btnBelgeHareketleri.Name = "btnBelgeHareketleri";
-            this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F4";
+            this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F6";
             this.btnBelgeHareketleri.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // barManager
@@ -205,10 +205,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         protected DevExpress.XtraBars.BarButtonItem btnKartDuzenle;
-        protected Navigators.InsUptNavigator insUptNavigator;
         protected DevExpress.XtraBars.BarButtonItem btnIptalEt;
         protected DevExpress.XtraBars.BarButtonItem btnIptalGeriAl;
         protected DevExpress.XtraBars.BarButtonItem btnHareketSil;
         protected DevExpress.XtraBars.BarButtonItem btnBelgeHareketleri;
+        protected internal Navigators.InsUptNavigator insUptNavigator;
     }
 }

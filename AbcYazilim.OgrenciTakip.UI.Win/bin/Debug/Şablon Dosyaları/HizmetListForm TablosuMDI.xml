@@ -89,12 +89,6 @@
   </property>
   <property name="GroupSummary" iskey="true" value="0" />
   <property name="ActiveFilterString" />
-  <property name="MRUFiltersInfo" iskey="true" value="1">
-    <property name="Item1" isnull="true" iskey="true">
-      <property name="NonColumnFilter" />
-      <property name="ColumnsFilter" iskey="true" value="0" />
-    </property>
-  </property>
   <property name="GroupSummarySortInfoState" />
   <property name="FindFilterText" />
   <property name="FindPanelVisible">false</property>

@@ -33,17 +33,28 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colPortfoyNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOdemeTuruAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colBankaHesapId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBankaHesapAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryBankaHesap = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colTakipNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colGirisTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colVade = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryVade = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.colBlokeGunSayisi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositorySpinEdit = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.colTutar = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.colTahsil = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colTahsilde = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIade = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKalan = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBankaId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBankaAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryBanka = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colBankaSubeId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBankaSubeAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryBankaSube = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colBelgeNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colHesapNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAsilBorclu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -54,17 +65,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colBelgeDurumu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colSonHareketTarih = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colSonIslemYeri = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.repositoryBankaHesap = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.repositoryBanka = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.repositoryBankaSube = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryBankaHesap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryVade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryVade.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositorySpinEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryBankaHesap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryBanka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryBankaSube)).BeginInit();
             this.SuspendLayout();
@@ -81,11 +90,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.grid.MainView = this.tablo;
             this.grid.Name = "grid";
             this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryTarih,
+            this.repositoryVade,
             this.repositoryDecimal,
             this.repositoryBankaHesap,
             this.repositoryBanka,
-            this.repositoryBankaSube});
+            this.repositoryBankaSube,
+            this.repositorySpinEdit,
+            this.repositoryTarih});
             this.grid.Size = new System.Drawing.Size(729, 388);
             this.grid.TabIndex = 5;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -106,9 +117,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colPortfoyNo,
             this.colOdemeTuruAdi,
+            this.colBankaHesapId,
             this.colBankaHesapAdi,
+            this.colTakipNo,
             this.colGirisTarihi,
             this.colVade,
+            this.colBlokeGunSayisi,
+            this.colTutar,
             this.colTahsil,
             this.colTahsilde,
             this.colIade,
@@ -141,11 +156,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.tablo.OptionsView.ColumnAutoWidth = false;
             this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
             this.tablo.OptionsView.RowAutoHeight = true;
+            this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisaYol = null;
-            this.tablo.StatusBarKisaYolAciklama = null;
+            this.tablo.StatusBarAciklama = "Ödeme Bilgileri Giriniz";
+            this.tablo.StatusBarKisaYol = "Shift  + Insert";
+            this.tablo.StatusBarKisaYolAciklama = "Ödeme Planı Oluştur.";
             this.tablo.ViewCaption = "Ödeme Bilgileri";
             // 
             // colPortfoyNo
@@ -178,6 +194,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colOdemeTuruAdi.VisibleIndex = 1;
             this.colOdemeTuruAdi.Width = 85;
             // 
+            // colBankaHesapId
+            // 
+            this.colBankaHesapId.Caption = "BankaHesapId";
+            this.colBankaHesapId.FieldName = "BankaHesapId";
+            this.colBankaHesapId.Name = "colBankaHesapId";
+            this.colBankaHesapId.OptionsColumn.AllowEdit = false;
+            this.colBankaHesapId.OptionsColumn.ShowInCustomizationForm = false;
+            this.colBankaHesapId.StatusBarAciklama = null;
+            this.colBankaHesapId.StatusBarKisaYol = null;
+            this.colBankaHesapId.StatusBarKisaYolAciklama = null;
+            // 
             // colBankaHesapAdi
             // 
             this.colBankaHesapAdi.Caption = "Banka Hesap Adı";
@@ -187,10 +214,30 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colBankaHesapAdi.OptionsColumn.AllowEdit = false;
             this.colBankaHesapAdi.OptionsFilter.AllowAutoFilter = false;
             this.colBankaHesapAdi.OptionsFilter.AllowFilter = false;
-            this.colBankaHesapAdi.StatusBarAciklama = null;
-            this.colBankaHesapAdi.StatusBarKisaYol = null;
-            this.colBankaHesapAdi.StatusBarKisaYolAciklama = null;
+            this.colBankaHesapAdi.StatusBarAciklama = "Hesap Seçiniz.";
+            this.colBankaHesapAdi.StatusBarKisaYol = "F4 :";
+            this.colBankaHesapAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colBankaHesapAdi.Width = 150;
+            // 
+            // repositoryBankaHesap
+            // 
+            this.repositoryBankaHesap.AutoHeight = false;
+            this.repositoryBankaHesap.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryBankaHesap.Name = "repositoryBankaHesap";
+            this.repositoryBankaHesap.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
+            // colTakipNo
+            // 
+            this.colTakipNo.Caption = "Takip No";
+            this.colTakipNo.FieldName = "TakipNo";
+            this.colTakipNo.Name = "colTakipNo";
+            this.colTakipNo.OptionsColumn.AllowEdit = false;
+            this.colTakipNo.OptionsColumn.ShowInCustomizationForm = false;
+            this.colTakipNo.StatusBarAciklama = "Takip No Giriniz.";
+            this.colTakipNo.StatusBarKisaYol = null;
+            this.colTakipNo.StatusBarKisaYolAciklama = null;
+            this.colTakipNo.Width = 85;
             // 
             // colGirisTarihi
             // 
@@ -210,23 +257,103 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colGirisTarihi.VisibleIndex = 2;
             this.colGirisTarihi.Width = 85;
             // 
+            // repositoryTarih
+            // 
+            this.repositoryTarih.AutoHeight = false;
+            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryTarih.Name = "repositoryTarih";
+            // 
             // colVade
             // 
             this.colVade.AppearanceCell.Options.UseTextOptions = true;
             this.colVade.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colVade.Caption = "Vade";
-            this.colVade.ColumnEdit = this.repositoryTarih;
+            this.colVade.ColumnEdit = this.repositoryVade;
             this.colVade.FieldName = "Vade";
             this.colVade.Name = "colVade";
             this.colVade.OptionsColumn.AllowEdit = false;
             this.colVade.OptionsFilter.AllowAutoFilter = false;
             this.colVade.OptionsFilter.AllowFilter = false;
-            this.colVade.StatusBarAciklama = null;
-            this.colVade.StatusBarKisaYol = null;
-            this.colVade.StatusBarKisaYolAciklama = null;
+            this.colVade.StatusBarAciklama = "Tarih Giriniz.";
+            this.colVade.StatusBarKisaYol = "F4 :";
+            this.colVade.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colVade.Visible = true;
             this.colVade.VisibleIndex = 3;
             this.colVade.Width = 85;
+            // 
+            // repositoryVade
+            // 
+            this.repositoryVade.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.repositoryVade.AutoHeight = false;
+            this.repositoryVade.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryVade.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryVade.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryVade.Name = "repositoryVade";
+            // 
+            // colBlokeGunSayisi
+            // 
+            this.colBlokeGunSayisi.Caption = "Bloke Gün Sayısı";
+            this.colBlokeGunSayisi.ColumnEdit = this.repositorySpinEdit;
+            this.colBlokeGunSayisi.FieldName = "BlokeGunSayisi";
+            this.colBlokeGunSayisi.Name = "colBlokeGunSayisi";
+            this.colBlokeGunSayisi.OptionsColumn.AllowEdit = false;
+            this.colBlokeGunSayisi.OptionsColumn.ShowInCustomizationForm = false;
+            this.colBlokeGunSayisi.OptionsFilter.AllowAutoFilter = false;
+            this.colBlokeGunSayisi.OptionsFilter.AllowFilter = false;
+            this.colBlokeGunSayisi.StatusBarAciklama = null;
+            this.colBlokeGunSayisi.StatusBarKisaYol = null;
+            this.colBlokeGunSayisi.StatusBarKisaYolAciklama = null;
+            this.colBlokeGunSayisi.Width = 100;
+            // 
+            // repositorySpinEdit
+            // 
+            this.repositorySpinEdit.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.repositorySpinEdit.AutoHeight = false;
+            this.repositorySpinEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositorySpinEdit.DisplayFormat.FormatString = "n0";
+            this.repositorySpinEdit.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositorySpinEdit.EditFormat.FormatString = "n0";
+            this.repositorySpinEdit.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositorySpinEdit.Mask.EditMask = "n0";
+            this.repositorySpinEdit.Name = "repositorySpinEdit";
+            // 
+            // colTutar
+            // 
+            this.colTutar.Caption = "Tutar";
+            this.colTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTutar.FieldName = "Tutar";
+            this.colTutar.Name = "colTutar";
+            this.colTutar.OptionsColumn.AllowEdit = false;
+            this.colTutar.OptionsFilter.AllowAutoFilter = false;
+            this.colTutar.OptionsFilter.AllowFilter = false;
+            this.colTutar.StatusBarAciklama = "Tutar Giriniz.";
+            this.colTutar.StatusBarKisaYol = "F4 :";
+            this.colTutar.StatusBarKisaYolAciklama = "Hesap Makinesi";
+            this.colTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tutar", "{0:n2}")});
+            this.colTutar.Visible = true;
+            this.colTutar.VisibleIndex = 6;
+            this.colTutar.Width = 95;
+            // 
+            // repositoryDecimal
+            // 
+            this.repositoryDecimal.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "n2";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.EditFormat.FormatString = "n2";
+            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Mask.EditMask = "n2";
+            this.repositoryDecimal.Name = "repositoryDecimal";
             // 
             // colTahsil
             // 
@@ -240,6 +367,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colTahsil.StatusBarAciklama = null;
             this.colTahsil.StatusBarKisaYol = null;
             this.colTahsil.StatusBarKisaYolAciklama = null;
+            this.colTahsil.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tahsil", "{0:n2}")});
             this.colTahsil.Visible = true;
             this.colTahsil.VisibleIndex = 4;
             this.colTahsil.Width = 95;
@@ -256,6 +385,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colTahsilde.StatusBarAciklama = null;
             this.colTahsilde.StatusBarKisaYol = null;
             this.colTahsilde.StatusBarKisaYolAciklama = null;
+            this.colTahsilde.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tahsilde", "{0:n2}")});
             this.colTahsilde.Visible = true;
             this.colTahsilde.VisibleIndex = 5;
             this.colTahsilde.Width = 95;
@@ -272,8 +403,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colIade.StatusBarAciklama = null;
             this.colIade.StatusBarKisaYol = null;
             this.colIade.StatusBarKisaYolAciklama = null;
+            this.colIade.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Iade", "{0:n2}")});
             this.colIade.Visible = true;
-            this.colIade.VisibleIndex = 6;
+            this.colIade.VisibleIndex = 7;
             this.colIade.Width = 95;
             // 
             // colKalan
@@ -288,8 +421,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colKalan.StatusBarAciklama = null;
             this.colKalan.StatusBarKisaYol = null;
             this.colKalan.StatusBarKisaYolAciklama = null;
+            this.colKalan.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Kalan", "{0:n2}")});
             this.colKalan.Visible = true;
-            this.colKalan.VisibleIndex = 7;
+            this.colKalan.VisibleIndex = 8;
             this.colKalan.Width = 95;
             // 
             // colBankaId
@@ -315,10 +450,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colBankaAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colBankaAdi.OptionsFilter.AllowAutoFilter = false;
             this.colBankaAdi.OptionsFilter.AllowFilter = false;
-            this.colBankaAdi.StatusBarAciklama = null;
-            this.colBankaAdi.StatusBarKisaYol = null;
-            this.colBankaAdi.StatusBarKisaYolAciklama = null;
+            this.colBankaAdi.StatusBarAciklama = "Banka Seçiniz.";
+            this.colBankaAdi.StatusBarKisaYol = "F4 :";
+            this.colBankaAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colBankaAdi.Width = 150;
+            // 
+            // repositoryBanka
+            // 
+            this.repositoryBanka.AutoHeight = false;
+            this.repositoryBanka.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryBanka.Name = "repositoryBanka";
+            this.repositoryBanka.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // colBankaSubeId
             // 
@@ -343,10 +486,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colBankaSubeAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colBankaSubeAdi.OptionsFilter.AllowAutoFilter = false;
             this.colBankaSubeAdi.OptionsFilter.AllowFilter = false;
-            this.colBankaSubeAdi.StatusBarAciklama = null;
-            this.colBankaSubeAdi.StatusBarKisaYol = null;
-            this.colBankaSubeAdi.StatusBarKisaYolAciklama = null;
+            this.colBankaSubeAdi.StatusBarAciklama = "Banka Şube Seçiniz.";
+            this.colBankaSubeAdi.StatusBarKisaYol = "F4 :";
+            this.colBankaSubeAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colBankaSubeAdi.Width = 150;
+            // 
+            // repositoryBankaSube
+            // 
+            this.repositoryBankaSube.AutoHeight = false;
+            this.repositoryBankaSube.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryBankaSube.Name = "repositoryBankaSube";
+            this.repositoryBankaSube.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // colBelgeNo
             // 
@@ -357,7 +508,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colBelgeNo.OptionsColumn.ShowInCustomizationForm = false;
             this.colBelgeNo.OptionsFilter.AllowAutoFilter = false;
             this.colBelgeNo.OptionsFilter.AllowFilter = false;
-            this.colBelgeNo.StatusBarAciklama = null;
+            this.colBelgeNo.StatusBarAciklama = "Belge No Giriniz.";
             this.colBelgeNo.StatusBarKisaYol = null;
             this.colBelgeNo.StatusBarKisaYolAciklama = null;
             this.colBelgeNo.Width = 85;
@@ -371,7 +522,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colHesapNo.OptionsColumn.ShowInCustomizationForm = false;
             this.colHesapNo.OptionsFilter.AllowAutoFilter = false;
             this.colHesapNo.OptionsFilter.AllowFilter = false;
-            this.colHesapNo.StatusBarAciklama = null;
+            this.colHesapNo.StatusBarAciklama = "Hesap No Giriniz";
             this.colHesapNo.StatusBarKisaYol = null;
             this.colHesapNo.StatusBarKisaYolAciklama = null;
             this.colHesapNo.Width = 150;
@@ -385,7 +536,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colAsilBorclu.OptionsColumn.ShowInCustomizationForm = false;
             this.colAsilBorclu.OptionsFilter.AllowAutoFilter = false;
             this.colAsilBorclu.OptionsFilter.AllowFilter = false;
-            this.colAsilBorclu.StatusBarAciklama = null;
+            this.colAsilBorclu.StatusBarAciklama = "Asıl Borçlu Giriniz.";
             this.colAsilBorclu.StatusBarKisaYol = null;
             this.colAsilBorclu.StatusBarKisaYolAciklama = null;
             this.colAsilBorclu.Width = 150;
@@ -399,7 +550,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colCiranta.OptionsColumn.ShowInCustomizationForm = false;
             this.colCiranta.OptionsFilter.AllowAutoFilter = false;
             this.colCiranta.OptionsFilter.AllowFilter = false;
-            this.colCiranta.StatusBarAciklama = null;
+            this.colCiranta.StatusBarAciklama = "Ciranta Giriniz.";
             this.colCiranta.StatusBarKisaYol = null;
             this.colCiranta.StatusBarKisaYolAciklama = null;
             this.colCiranta.Width = 150;
@@ -435,14 +586,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
             this.colAciklama.Name = "colAciklama";
-            this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsFilter.AllowAutoFilter = false;
             this.colAciklama.OptionsFilter.AllowFilter = false;
-            this.colAciklama.StatusBarAciklama = null;
+            this.colAciklama.StatusBarAciklama = "Açıklama Giriniz.";
             this.colAciklama.StatusBarKisaYol = null;
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 9;
+            this.colAciklama.VisibleIndex = 10;
             this.colAciklama.Width = 350;
             // 
             // colBelgeDurumu
@@ -457,7 +607,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colBelgeDurumu.StatusBarKisaYol = null;
             this.colBelgeDurumu.StatusBarKisaYolAciklama = null;
             this.colBelgeDurumu.Visible = true;
-            this.colBelgeDurumu.VisibleIndex = 8;
+            this.colBelgeDurumu.VisibleIndex = 9;
             this.colBelgeDurumu.Width = 200;
             // 
             // colSonHareketTarih
@@ -475,7 +625,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colSonHareketTarih.StatusBarKisaYol = null;
             this.colSonHareketTarih.StatusBarKisaYolAciklama = null;
             this.colSonHareketTarih.Visible = true;
-            this.colSonHareketTarih.VisibleIndex = 10;
+            this.colSonHareketTarih.VisibleIndex = 11;
             this.colSonHareketTarih.Width = 100;
             // 
             // colSonIslemYeri
@@ -490,54 +640,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.colSonIslemYeri.StatusBarKisaYol = null;
             this.colSonIslemYeri.StatusBarKisaYolAciklama = null;
             this.colSonIslemYeri.Visible = true;
-            this.colSonIslemYeri.VisibleIndex = 11;
+            this.colSonIslemYeri.VisibleIndex = 12;
             this.colSonIslemYeri.Width = 185;
-            // 
-            // repositoryTarih
-            // 
-            this.repositoryTarih.AutoHeight = false;
-            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.repositoryTarih.Name = "repositoryTarih";
-            // 
-            // repositoryDecimal
-            // 
-            this.repositoryDecimal.AutoHeight = false;
-            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryDecimal.DisplayFormat.FormatString = "n2";
-            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.EditFormat.FormatString = "n2";
-            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.Mask.EditMask = "n2";
-            this.repositoryDecimal.Name = "repositoryDecimal";
-            // 
-            // repositoryBankaHesap
-            // 
-            this.repositoryBankaHesap.AutoHeight = false;
-            this.repositoryBankaHesap.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryBankaHesap.Name = "repositoryBankaHesap";
-            this.repositoryBankaHesap.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            // 
-            // repositoryBanka
-            // 
-            this.repositoryBanka.AutoHeight = false;
-            this.repositoryBanka.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryBanka.Name = "repositoryBanka";
-            this.repositoryBanka.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            // 
-            // repositoryBankaSube
-            // 
-            this.repositoryBankaSube.AutoHeight = false;
-            this.repositoryBankaSube.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryBankaSube.Name = "repositoryBankaSube";
-            this.repositoryBankaSube.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // OdemeBilgileriTable
             // 
@@ -550,10 +654,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryBankaHesap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryVade.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryVade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositorySpinEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryBankaHesap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryBanka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryBankaSube)).EndInit();
             this.ResumeLayout(false);
@@ -589,9 +696,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
         private Grid.MyGridColumn colSonHareketTarih;
         private Grid.MyGridColumn colSonIslemYeri;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryBankaHesap;
-        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryTarih;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryVade;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryBanka;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryBankaSube;
+        private Grid.MyGridColumn colTakipNo;
+        private Grid.MyGridColumn colTutar;
+        private Grid.MyGridColumn colBlokeGunSayisi;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositorySpinEdit;
+        private Grid.MyGridColumn colBankaHesapId;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryTarih;
     }
 }

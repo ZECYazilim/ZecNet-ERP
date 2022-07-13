@@ -63,12 +63,15 @@
     <Compile Include="General\BankaBll.cs" />
     <Compile Include="General\BankaHesapBll.cs" />
     <Compile Include="General\BankaSubeBll.cs" />
+    <Compile Include="General\BelgeHareketleriBll.cs" />
+    <Compile Include="General\BelgeSecimBll.cs" />
     <Compile Include="General\BilgiNotlariBll.cs" />
     <Compile Include="General\CariBll.cs" />
     <Compile Include="General\EposBilgileriBll.cs" />
     <Compile Include="General\EvrakBilgileriBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FiltreBll.cs" />
+    <Compile Include="General\GeriOdemeBilgileriBll.cs" />
     <Compile Include="General\GorevBll.cs" />
     <Compile Include="General\HizmetBilgileriBll.cs" />
     <Compile Include="General\HizmetBll.cs" />
@@ -86,6 +89,8 @@
     <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
+    <Compile Include="General\MakbuzBll.cs" />
+    <Compile Include="General\MakbuzHareketleriBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
     <Compile Include="General\OdemeBilgileriBll.cs" />
     <Compile Include="General\OdemeTuruBll.cs" />

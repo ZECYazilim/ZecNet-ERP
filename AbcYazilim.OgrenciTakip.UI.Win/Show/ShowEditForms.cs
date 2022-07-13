@@ -3,10 +3,7 @@ using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Show
 {
@@ -34,6 +31,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Show
                 frm.Yukle();
                 frm.ShowDialog();
                 return frm.RefreshControl ? frm.Id : 0;
+            }
+        }
+        public static bool ShowDialogEditForm(params object[] prm)
+        {
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+            {
+                frm.Yukle();
+
+                return frm.DialogResult==DialogResult.OK;
             }
         }
         public static T ShowDialogEditForm<T>(params object[] prm)where T:IBaseEntity

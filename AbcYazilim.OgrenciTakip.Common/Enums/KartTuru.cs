@@ -71,6 +71,12 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         [Description("İndirim Kartı")]
         Indirim = 33,
         [Description("Tahakkuk Kartı")]
-        Tahakkuk = 34
+        Tahakkuk = 34,
+        [Description("Makbuz Kartı")]
+        Makbuz=35,
+        [Description("Belge Seçim Kartı")]
+        BelgeSecim = 36,
+        [Description("Belge Hareketleri")]
+        BelgeHareketleri = 37
     }
 }

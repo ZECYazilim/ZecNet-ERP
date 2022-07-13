@@ -65,8 +65,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.EndSorting += Tablo_SablonChanged;
             Tablo.DoubleClick += Tablo_DoubleClick;
             Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged;
+            Tablo.RowCountChanged += Tablo_RowCountChanged;
         }
-
+ 
         protected internal void Yukle()
         {
             _isLoaded = true;
@@ -149,6 +150,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             return true;
 
         }
+        protected virtual void BelgeHareketleri() { }
         private void Button_ItemClick(object sender, ItemClickEventArgs e) //burası sağ tıklayınca gelen popup menü
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -162,6 +164,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 IptalEt();
             else if (e.Item == btnIptalGeriAl)
                 IptalGeriAl();
+            else if (e.Item == btnBelgeHareketleri)
+                BelgeHareketleri();
             Cursor.Current = DefaultCursor;
         }
         protected virtual void ImageComboBox_SelectedValueChanged(object sender, EventArgs e){}
@@ -243,6 +247,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 case Keys.R when e.Control:
                     IptalGeriAl();
                     break;
+                case Keys.F6:
+                    BelgeHareketleri();
+                    break;
             }
         }
         protected virtual void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
@@ -281,5 +288,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             SutunGizleGoster();
             RowCellAllowEdit();
         }
+        protected virtual void Tablo_RowCountChanged(object sender, EventArgs e){}
     }
 }

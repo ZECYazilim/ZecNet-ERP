@@ -32,6 +32,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
 {
@@ -49,11 +50,21 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
         public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
         public static bool GunTarihininOncesineIptalTarihiGirilebilir = true;
         public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
+        public static bool GunTarihininOncesineMakbuzTarihiGirilebilir = true;
+        public static bool GunTarihininSonrasinaMakbuzTarihiGirilebilir = true;
         public static bool HizmetTahakkukKurusKullan;
         public static bool IndirimTahakkukKurusKullan;
+        public static bool OdemePlaniKurusKullan;
         public static bool GittigiOkulZorunlu = true;
         public static DateTime MaksimumTaksitTarihi = new DateTime(2022, 06, 30);
         public static byte MaksimumTaksitSayisi= 12;
+        public static long? DefaultCaseId;
+        public static string DefaultCaseName;
+        public static long? DefaultBankId;
+        public static string DefaultBankName;
+        public static long? DefaultLawyerId;
+        public static string DefaultLawyerName;
+        public static long KullaniciId = 1;
         public AnaForm()
         {
             InitializeComponent();
@@ -135,6 +146,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GeneralForms
                 ShowListForms<IndirimListForm>.ShowListForm(KartTuru.Indirim);
             else if (e.Item == btnTahakkukKartlari)
                 ShowListForms<TahakkukListForm>.ShowListForm(KartTuru.Tahakkuk);
+            else if (e.Item == btnMakbuzKartlari)
+                ShowListForms<MakbuzListForm>.ShowListForm(KartTuru.Makbuz);
         }
     }
 }

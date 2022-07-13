@@ -1,0 +1,269 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="#LayoutScaleFactor">@1,Width=1@1,Height=1</property>
+  <property name="Columns" iskey="true" value="28">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="VisibleIndex">1</property>
+      <property name="Name">colOgrenciNo</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="VisibleIndex">2</property>
+      <property name="Name">colAdi</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="VisibleIndex">3</property>
+      <property name="Name">colSoyadi</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="VisibleIndex">4</property>
+      <property name="Name">colSinifAdi</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="VisibleIndex">5</property>
+      <property name="Name">colOgrenciSubeAdi</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="VisibleIndex">7</property>
+      <property name="Name">colBelgeSubeAdi</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="VisibleIndex">8</property>
+      <property name="Name">colOdemeTuruAdi</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">colBankaHesapAdi</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">colTakipNo</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="VisibleIndex">6</property>
+      <property name="Name">colPortfoyNo</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="VisibleIndex">9</property>
+      <property name="Name">colGirisTarihi</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="VisibleIndex">10</property>
+      <property name="Name">colVade</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="VisibleIndex">11</property>
+      <property name="Name">colHesabaGecisTarihi</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="VisibleIndex">12</property>
+      <property name="Name">colTutar</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="VisibleIndex">13</property>
+      <property name="Name">colTahsil</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="VisibleIndex">14</property>
+      <property name="Name">colIade</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="VisibleIndex">15</property>
+      <property name="Name">colKalan</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="VisibleIndex">18</property>
+      <property name="Name">colSonIslemTarihi</property>
+      <property name="Visible">true</property>
+      <property name="Width">150</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="VisibleIndex">19</property>
+      <property name="Name">colSonIslemYeri</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">colBankaAdi</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">colBankaSubeAdi</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">colBelgeNo</property>
+      <property name="Width">150</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">colHesapNo</property>
+      <property name="Width">150</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="VisibleIndex">20</property>
+      <property name="Name">colAsilBorclu</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="VisibleIndex">21</property>
+      <property name="Name">colCiranta</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="VisibleIndex">16</property>
+      <property name="Name">colBelgeDurumu</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="VisibleIndex">17</property>
+      <property name="Name">colAciklama</property>
+      <property name="Visible">true</property>
+      <property name="Width">250</property>
+      <property name="MinWidth">20</property>
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="VisibleIndex">0</property>
+      <property name="Visible">true</property>
+      <property name="Width">35</property>
+      <property name="MinWidth">20</property>
+    </property>
+  </property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="HeaderFilterButtonShowMode">Button</property>
+    <property name="ColumnAutoWidth">false</property>
+    <property name="RowAutoHeight">true</property>
+    <property name="ShowAutoFilterRow">true</property>
+    <property name="ShowGroupPanel">false</property>
+    <property name="ShowViewCaption">true</property>
+  </property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="Bands" iskey="true" value="4">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Fixed">Left</property>
+      <property name="Width">35</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1" />
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">bndSecim</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Fixed">Left</property>
+      <property name="Width">600</property>
+      <property name="Columns" iskey="true" value="5">
+        <property name="Item1">colOgrenciNo</property>
+        <property name="Item2">colAdi</property>
+        <property name="Item3">colSoyadi</property>
+        <property name="Item4">colSinifAdi</property>
+        <property name="Item5">colOgrenciSubeAdi</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand1</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Width">1900</property>
+      <property name="Columns" iskey="true" value="16">
+        <property name="Item1">colPortfoyNo</property>
+        <property name="Item2">colBelgeSubeAdi</property>
+        <property name="Item3">colOdemeTuruAdi</property>
+        <property name="Item4">colBankaHesapAdi</property>
+        <property name="Item5">colTakipNo</property>
+        <property name="Item6">colGirisTarihi</property>
+        <property name="Item7">colVade</property>
+        <property name="Item8">colHesabaGecisTarihi</property>
+        <property name="Item9">colTutar</property>
+        <property name="Item10">colTahsil</property>
+        <property name="Item11">colIade</property>
+        <property name="Item12">colKalan</property>
+        <property name="Item13">colBelgeDurumu</property>
+        <property name="Item14">colAciklama</property>
+        <property name="Item15">colSonIslemTarihi</property>
+        <property name="Item16">colSonIslemYeri</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand2</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Width">400</property>
+      <property name="Columns" iskey="true" value="6">
+        <property name="Item1">colBankaAdi</property>
+        <property name="Item2">colBankaSubeAdi</property>
+        <property name="Item3">colBelgeNo</property>
+        <property name="Item4">colHesapNo</property>
+        <property name="Item5">colAsilBorclu</property>
+        <property name="Item6">colCiranta</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">bndBelgeDetayBilgileri</property>
+    </property>
+  </property>
+  <property name="GroupSummary" iskey="true" value="0" />
+  <property name="ActiveFilterString" />
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

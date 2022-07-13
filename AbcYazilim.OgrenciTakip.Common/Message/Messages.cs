@@ -73,6 +73,11 @@ namespace AbcYazilim.OgrenciTakip.Common.Message
         {
             HataMesaji($"{alanAdi} Seçimi Yapmalısınız");
         }
-
+        public static void OdemeBelgesiSilinemezMesaj(bool checkControl)
+        {
+            UyariMesaji(checkControl
+                ?"Ödeme Belgesinin Daha Sonra İşlem Görmüş Hareketleri Var.Ödeme Belgesi Silinemez."
+                : "Ödeme Belgesinin İşlem Görmüş Hareketleri Var.Ödeme Belgesi Silinemez.");
+        }
     }
 }

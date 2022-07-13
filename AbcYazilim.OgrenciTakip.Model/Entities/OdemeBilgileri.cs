@@ -1,6 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -44,5 +45,6 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public BankaHesap BankaHesap { get; set; }
         public Banka Banka { get; set; }
         public BankaSube BankaSube { get; set; }
+        public ICollection<MakbuzHareketleri> MakbuzHareketleri { get; set; }
     }
 }

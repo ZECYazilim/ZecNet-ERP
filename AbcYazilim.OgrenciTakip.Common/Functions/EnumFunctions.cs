@@ -30,6 +30,9 @@ namespace AbcYazilim.OgrenciTakip.Common.Functions
         }
         public static T GetEnum<T>(this string description)
         {
+            if (Enum.IsDefined(typeof(T), description))
+                return (T)Enum.Parse(typeof(T), description, true);
+
             var enumNames = Enum.GetNames(typeof(T));
             foreach (var e in enumNames.Select(x=>Enum.Parse(typeof(T),x)).Where(y=>description==ToName((Enum)y)))
                 return (T)e;

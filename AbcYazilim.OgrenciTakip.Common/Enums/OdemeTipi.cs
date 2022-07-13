@@ -9,19 +9,19 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
 {
     public enum OdemeTipi:byte
     {
-        [Description("AÇIK")]
+        [Description("Açık")]
         Acik=1,
-        [Description("ÇEK")]
+        [Description("Çek")]
         Cek =2,
-        [Description("ELDEN")]
+        [Description("Elden")]
         Elden =3,
-        [Description("E-POS")]
+        [Description("Epos")]
         Epos =4,
-        [Description("OTS")]
+        [Description("Ots")]
         Ots =5,
-        [Description("POS")]
+        [Description("Pos")]
         Pos =6,
-        [Description("SENET")]
+        [Description("Senet")]
         Senet =7
     }
 }

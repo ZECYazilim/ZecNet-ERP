@@ -24,7 +24,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Show
             frm.MdiParent = Form.ActiveForm;
             frm.Yukle();
             frm.Show();
-        }
+        }     
         public static BaseEntity ShowDialogListForm(KartTuru kartTuru,long? seciliGelecekId,params object[] prm)
         {
             //Authorization
@@ -32,7 +32,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Show
             {
                 frm.SeciliGelecekId = seciliGelecekId;
                 frm.Yukle();
-                frm.ShowDialog();
+                if(!frm.IsDisposed)
+                    frm.ShowDialog();
                 return frm.DialogResult == DialogResult.OK ? frm.SelectedEntity : null;
             }
         }
